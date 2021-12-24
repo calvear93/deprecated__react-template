@@ -11,6 +11,12 @@
   A JavaScript library for building user interfaces.
 </p>
 
+<p align="center">
+  <a href="https://github.com/calvear93/react-template" target="_blank">
+    <img src="https://img.shields.io/github/license/calvear93/react-template" alt="Package License" />
+  </a>
+</p>
+
 ## ✒ **Description**
 
 <a href="https://reactjs.org/" target="_blank">React</a> is a library for
