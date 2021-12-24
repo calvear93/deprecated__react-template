@@ -78,8 +78,6 @@ target="_blank">Create React App</a>.
 
 -   Replace globally these terms:
 
-    -   `<repository>` i.e. https://achsdev.visualstudio.com/projects/_git/ACHS.Skeleton.App
-
     -   `<base-path>` api base path, i.e. web (for get /web/\*)
     -   `<app-name>` app name, i.e. home-web
     -   `<project-name>` project name, i.e. achs-virtual

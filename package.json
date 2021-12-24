@@ -4,9 +4,13 @@
     "name": "<app-name>",
     "title": "<app-title>",
     "description": "<project-description>",
-    "repository": "<repository>",
-    "private": true,
-    "owner": "<owner>",
+    "license": "MIT",
+    "private": false,
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/calvear93/react-template"
+    },
+    "author": "Alvear Candia, Cristopher Alejandro <calvear93@gmail.com>",
     "contributors": [
         {
             "name": "Last Name, First Name",
@@ -20,10 +24,6 @@
         "rsuite",
         "react-router"
     ],
-    "engines": {
-        "node": ">=14.0.0",
-        "npm": ">=7.5.6"
-    },
     "scripts": {
         "start:dev": "env-cmd -e dev,debug -r env/exec/loader.js --verbose craco start --verbose",
         "start:qa": "env-cmd -e qa,debug  -r env/exec/loader.js craco start",
@@ -121,5 +121,9 @@
             "not op_mini all",
             "not ie <= 10"
         ]
+    },
+    "engines": {
+        "node": ">=14.0.0 || ^16.13.1",
+        "npm": ">=7.5.6"
     }
 }
