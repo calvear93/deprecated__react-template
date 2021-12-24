@@ -1,2 +1,216 @@
-# react-template
-A preconfigured react cra template
+<h2 align="center"><b>React Skeleton</b></h2>
+<h3 align="center"><b>SPA</b></h3>
+
+<br />
+
+<p align="center">
+  <a href="https://reactjs.org/" target="blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" width="220" alt="React Logo" /></a>
+</p>
+
+<p align="center">
+  A JavaScript library for building user interfaces.
+</p>
+
+## ✒ **Description**
+
+<a href="https://reactjs.org/" target="_blank">React</a> is a library for
+building semantic components in a very easy way. It uses modern JavaScript, and supports <a
+href="http://www.typescriptlang.org" target="_blank">TypeScript</a>, and under
+the hood this skeleton uses <a href="https://create-react-app.dev/"
+target="_blank">Create React App</a>.
+
+## ⛩ **Structure**
+
+```bash
+├── README.md
+├── .vscode/ # vscode debug config
+├── deploy/
+│   ├── k8s/ # kubernetes manifests
+│   ├── templates/
+│   │   ├── read-project-info.stage.yml # reads package.json info for pipeline
+│   │   └── vars.template.yml # environment variables orchestrator for pipeline
+│   ├── Dockerfile
+│   └── azure-pipelines.yml
+├── env/
+│   ├── exec/
+│   │   ├── env.schema.json # env vars schema
+│   │   ├── cmd.js # pull and push commands
+│   │   └── loader.js # environment variables loader for env-cmd
+│   ├── secrets/ # will contains dev.env.json, qa.env.json, etc.
+│   ├── appsettings.json # non secret environment variables
+│   └── keys.json # gitignored! has azure key vault keys
+├── src/
+│   ├── app/ # initialization
+│   │   ├── assets/
+│   │   ├── config/
+│   │   ├── styles/ # global styles
+│   │   ├── assets.d.ts # assets and modules declaration
+│   │   ├── app.routes.ts # application routes
+│   │   ├── App.store.tsx # redux
+│   │   ├── App.router.tsx
+│   │   └── App.tsx
+│   ├── components/ # shared components
+│   ├── hooks/ # shared hooks
+│   ├── layouts/ # app layouts and containers
+│   ├── pages/ # app pages, loaded in app/app.routes.ts
+│   ├── services/ # adapters, api connections
+│   ├── slices/ # redux reducers and actions
+│   ├── tests/ # e2e tests
+│   ├── modules/ # libraries shared with other apps
+│   │   ├── router/ # routing using react router v6
+│   │   ├── ui/ # react suite initializer
+│   │   ├── toast/ # react-toastify
+│   │   └── swal/ # sweetalert 2
+│   ├── env.d.ts # .env environment types declaration
+│   └── index.tsx
+├── tsconfig.json
+├── webpack.config.js # webpack config (craco)
+└── package.json
+```
+
+## 📥 **How to Start**
+
+-   Replace globally these terms:
+
+    -   `<repository>` i.e. https://achsdev.visualstudio.com/projects/_git/ACHS.Skeleton.App
+
+    -   `<base-path>` api base path, i.e. web (for get /web/\*)
+    -   `<app-name>` app name, i.e. home-web
+    -   `<project-name>` project name, i.e. achs-virtual
+    -   `<project-title>` project title, i.e. ACHS Virtual
+    -   `<project-description>` project description, i.e. API for manage user data
+
+-   Install [NodeJS](https://nodejs.org/es/) for your machine.
+-   Execute `npm install` command. (`npm i --force` in case of conflicts).
+-   Execute the app with `npm run start:dev`.
+
+## 📋 **Branches and Environments**
+
+Project has 4 environments (infrastructure) base for project building.
+
+-   **dev (development)**: environment with breaking changes and new features.
+-   **qa (quality assurance)**: environment for testing and quality assurance.
+-   **prod (production)**: productive environment.
+
+## 🧪 **Executing**
+
+Project uses **npm scripts** for eases execution, testing and building.
+Many of these script run on a defined environment, specified after ':', and
+it environment may be 'dev', 'qa' or 'prod'.
+
+| Command                       | Action                        |
+| ----------------------------- | ----------------------------- |
+| npm run start:`<env>`         | executes the app              |
+| npm run build:`<env>`         | build the app                 |
+| npm run test:`<env>`          | executes tests                |
+| npm run test:coverage:`<env>` | testing coverage report       |
+| npm run env:pull:`<env>`      | pulls environment secrets     |
+| npm run env:push:`<env>`      | pushes environment secrets    |
+| npm run lint                  | code format review            |
+| npm run lint:fix              | code format review/fix        |
+| npm run stylelint             | stylesheets format review     |
+| npm run stylelint:fix         | stylesheets format review/fix |
+
+## ⚙️ **Commands**
+
+### **1. Docker**
+
+| Command                                                                                                 | Action       |
+| ------------------------------------------------------------------------------------------------------- | ------------ |
+| docker build --build-arg ENV=`<env>` --tag `<image_name>` `<build-context>`                             | docker build |
+| docker run -d -it -p `<expose_port>`:`<container_app_port>`/tcp --name `<instance_name>` `<image_name>` | docker exec  |
+
+### **2. Node Tools**
+
+| Command                      | Action                    |
+| ---------------------------- | ------------------------- |
+| npm install -g npm@latest    | npm update                |
+| npm update --save/--save-dev | soft updated for packages |
+| npx npm-check-updates -u     | hard update for packages  |
+
+### **3. Git Helpful Commands**
+
+| Command                                   | Action                             |
+| ----------------------------------------- | ---------------------------------- |
+| git config core.ignorecase false          | case-sensitive enable              |
+| git rebase -i `<commit-hash>` --autostash | rebase history                     |
+| git push --force                          | force push your rebase             |
+| git checkout `<branch>`                   | select branch                      |
+| git fetch `<remote>` `<branch>`           | retrieves branch remote changes    |
+| git reset --hard `<remote>`/`<branch>`    | resets your branch to remote state |
+| git gc --prune=now --aggressive           | repository maintenance command     |
+
+### **4. Git Subtree**
+
+| Command                                                                  | Action              |
+| ------------------------------------------------------------------------ | ------------------- |
+| git remote add -f `<remote-name>` `<branch>`                             | adds a remote       |
+| git subtree add --prefix `<path>` `<remote-name>` `<branch>` [--squash]  | attaches a subtree  |
+| git fetch `<remote-name>` `<branch>`                                     | fetches a remote    |
+| git subtree pull --prefix `<path>` `<remote-name>` `<branch>` [--squash] | pulls from subtree  |
+| git subtree push --prefix `<path>` `<remote-name>` `<branch>` [--squash] | push subtree change |
+
+use commands below:
+
+| Command                                                               | Action                          |
+| --------------------------------------------------------------------- | ------------------------------- |
+| git subtree split --prefix `<path>` --onto=`<remote-name>`/`<branch>` | splits a subtree for force push |
+| git push ui-core `<hash-returned-previous-cmd>`:`<branch>` --force    | force push                      |
+
+## 🧿 **Linting**
+
+Project uses two linters, for code formatting and code styling normalizing.
+
+-   **eslint**: linter with TypeScript parser and some other additions.
+-   **stylelint**: linter for CSS, SASS with good practices.
+
+For correct interpretation of linters, is recommended to use [Visual Studio Code](https://code.visualstudio.com/) as IDE and install the plugins in .vscode folder at 'extensions.json'.
+
+## 🛠️ **Troubleshooting**
+
+-   **I want to debug my code with breakpoints**:
+
+    First, you should run your app with `npm run start:dev` so you can debug in Visual Studio Code,
+    using the `launch.json` profile in .vscode, pressing F5 or in Run and Debug sidebar option.
+
+-   **`<cmd>` is not recognized as an internal or external command, operable program or batch file.**:
+
+    In Windows, sometimes appear this message, because some node module isn't installed for your system version.
+    In example, if you execute `npm i` in WSL, and execute `npm run start:dev` in Powershell, you get the error
+    for `env-cmd` is not recognized.
+    So, you should execute `npm i` in Powershell terminal for solve that.
+
+*   **I can't see my console logs for my unit tests**:
+
+    You can set "verbose": false in webpack.config.js for show your console logs.
+
+*   **When pushing to remote subtree, you get the error below**:
+
+```bash
+To https://any.domain.com/repo/_git/project
+  ! [rejected]        420a15d0c81da609f217d7a22f5581656dc3e9cf -> anyBranch (non-fast-forward)
+  error: failed to push some refs to 'https://any.domain.com/repo/_git/project'
+  hint: Updates were rejected because a pushed branch tip is behind its remote
+  hint: counterpart. Check out this branch and integrate the remote changes
+  hint: (e.g. 'git pull ...') before pushing again.
+  hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+```
+
+use commands below:
+
+| Command                                                               | Action                          |
+| --------------------------------------------------------------------- | ------------------------------- |
+| git subtree split --prefix `<path>` --onto=`<remote-name>`/`<branch>` | splits a subtree for force push |
+| git push ui-core `<hash-returned-previous-cmd>`:`<branch>` --force    | force push                      |
+
+## 🧮 **Built with**
+
+-   [Create React App](https://github.com/facebook/create-react-app) - Official React SPA framework.
+-   [React Suite](hhttps://rsuitejs.com/) - UI framework.
+-   [env-cmd](https://github.com/toddbluhm/env-cmd) - NodeJS app's environment utility.
+-   [craco](https://github.com/gsoft-inc/craco) - CRA webpack config injector.
+-   [Material Design Icons](https://materialdesignicons.com/)
+
+---
+
+⌨ by Alvear Candia, Cristopher Alejandro <calvear93@gmail.com>
