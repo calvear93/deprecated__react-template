@@ -1,0 +1,22 @@
+{
+    "explorer.sortOrder": "type",
+    "files.exclude": {
+        "**/*.log": true,
+        "**/*.map.js": true,
+        "**/.DS_Store": true,
+        "**/.git": true,
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/.hg": true,
+        "**/.history/**": true,
+        "**/.svn": true,
+        "**/CVS": true,
+        "**/bower_components/**": true,
+        "**/node_modules/**": true,
+        "desktop.ini": true,
+        "folderico*.ico": true
+    },
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "typescript.tsdk": "node_modules\\typescript\\lib"
+}

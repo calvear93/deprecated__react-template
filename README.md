@@ -208,7 +208,7 @@ use commands below:
 ## 🧮 **Built with**
 
 -   [Create React App](https://github.com/facebook/create-react-app) - Official React SPA framework.
--   [React Suite](hhttps://rsuitejs.com/) - UI framework.
+-   [React Suite](https://rsuitejs.com/) - UI framework.
 -   [env-cmd](https://github.com/toddbluhm/env-cmd) - NodeJS app's environment utility.
 -   [craco](https://github.com/gsoft-inc/craco) - CRA webpack config injector.
 -   [Material Design Icons](https://materialdesignicons.com/)
