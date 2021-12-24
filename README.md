@@ -108,8 +108,6 @@ it environment may be 'dev', 'qa' or 'prod'.
 | npm run build:`<env>`         | build the app                 |
 | npm run test:`<env>`          | executes tests                |
 | npm run test:coverage:`<env>` | testing coverage report       |
-| npm run env:pull:`<env>`      | pulls environment secrets     |
-| npm run env:push:`<env>`      | pushes environment secrets    |
 | npm run lint                  | code format review            |
 | npm run lint:fix              | code format review/fix        |
 | npm run stylelint             | stylesheets format review     |
