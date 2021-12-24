@@ -74,7 +74,7 @@ target="_blank">Create React App</a>.
 └── package.json
 ```
 
-## 📥 **How to Start**
+## 📥 **Getting Started**
 
 -   Replace globally these terms:
 
