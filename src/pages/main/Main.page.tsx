@@ -15,6 +15,7 @@ const { sample: sampleAction } = sampleSlice.actions;
 export const MainPage: React.FC = () => {
     const dispatch = useAppDispatch();
     const { message } = useSampleSelector();
+
     useEffect(() => {
         dispatch(sampleAction(200));
     }, []);
