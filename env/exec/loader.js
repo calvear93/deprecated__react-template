@@ -33,14 +33,14 @@ function buildEnv()
 
     const vars = {
         [modeName]: {
-            VERSION: app.version,
-            PROJECT: app.project,
-            NAME: app.name,
-            TITLE: app.title,
-            DESCRIPTION: app.description
+            REACT_APP_VERSION: app.version,
+            REACT_APP_PROJECT: app.project,
+            REACT_APP_NAME: app.name,
+            REACT_APP_TITLE: app.title,
+            REACT_APP_DESCRIPTION: app.description
         },
         [envName]: {
-            ENV: envName,
+            REACT_APP_ENV: envName,
             ...flatten(settings.default),
             ...flatten(settings.env?.[envName]),
             ...flatten(readEnvFile(`env/secrets/${envName}.env.json`)),
