@@ -78,11 +78,11 @@ target="_blank">Create React App</a>.
 
 -   Replace globally these terms:
 
-    -   `<base-path>` api base path, i.e. web (for get /web/\*)
+    -   `<base-path>` api base path, i.e. web (for get /web/*)
     -   `<app-name>` app name, i.e. home-web
     -   `<project-name>` project name, i.e. my-project
     -   `<project-title>` project title, i.e. My Project
-    -   `<project-description>` project description, i.e. API for manage user data
+    -   `<project-description>` project description, i.e. Web for show account info
 
 -   Install [NodeJS](https://nodejs.org/es/) for your machine.
 -   Execute `npm install` command. (`npm i --force` in case of conflicts).
