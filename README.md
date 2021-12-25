@@ -37,6 +37,7 @@ Main feature are:
 -   `react router` 6 with declarative routing handler
 -   `service worker` ready
 -   `redux` ready using `@redux-toolkit`
+-   `react-toastify` and `sweet alert 2`
 -   `docker` ready
 
 ## ⛩ **Structure**
@@ -77,6 +78,7 @@ Main feature are:
 │   └── index.tsx
 ├── Dockerfile
 ├── tsconfig.json
+├── service-worker.ts
 ├── webpack.config.js # webpack config (craco)
 └── package.json
 ```
