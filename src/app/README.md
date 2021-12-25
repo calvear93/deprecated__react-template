@@ -2,7 +2,7 @@
 
 ## 1. Routes
 
-App routes definition in `routes/app.routes.ts`.
+App routes definition in `app.routes.ts`.
 
 You can define nested routes and reuse lazy loaded components, improving code
 splitting.
