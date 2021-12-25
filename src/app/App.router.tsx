@@ -6,8 +6,8 @@ import { Router } from '@router';
  * Here you can define logic for authorization
  * redirection or app splitting.
  *
- * @returns {React.FC} application main router
+ * @returns {JSX.Element} application main router
  */
-export const AppRouter: React.FC = () => {
+export const AppRouter: React.FC = (): JSX.Element => {
     return <Router loader={<h1>Loading</h1>} />;
 };

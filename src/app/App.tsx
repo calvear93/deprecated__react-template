@@ -14,9 +14,9 @@ import './styles/app.scss';
  * Here occur the initialization
  * and localization of some libs.
  *
- * @returns {React.FC} app container
+ * @returns {JSX.Element} app container
  */
-export const App: React.FC = () => {
+export const App: React.FC = (): JSX.Element => {
     return (
         <UIProvider>
             <RouterProvider

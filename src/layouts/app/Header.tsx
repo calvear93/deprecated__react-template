@@ -7,9 +7,9 @@ interface IHeaderPayload {
 /**
  * Header for App Layout.
  *
- * @returns {React.FC} header component
+ * @returns {JSX.Element} header component
  */
-export const Header: React.FC = () => {
+export const Header: React.FC = (): JSX.Element => {
     const { header: { title } = {} } = useRoutePayload<IHeaderPayload>();
 
     return <header>{title}</header>;

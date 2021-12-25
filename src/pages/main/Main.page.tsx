@@ -10,9 +10,9 @@ const { sample: sampleAction } = sampleSlice.actions;
 /**
  * Main page.
  *
- * @returns {React.FC} main page
+ * @returns {JSX.Element} main page
  */
-export const MainPage: React.FC = () => {
+export const MainPage: React.FC = (): JSX.Element => {
     const dispatch = useAppDispatch();
     const { message } = useSampleSelector();
 

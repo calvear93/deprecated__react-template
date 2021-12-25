@@ -37,9 +37,11 @@ class RouterService {
      * Default component for show on no route found
      *
      * @type {React.FC}
-     * @returns {React.FC}
+     * @returns {JSX.Element}
      */
-    private _DefaultChild: React.FC = () => <Navigate to={this._basePath} />;
+    private _DefaultChild: React.FC = (): JSX.Element => (
+        <Navigate to={this._basePath} />
+    );
 
     /**
      * Return routes.

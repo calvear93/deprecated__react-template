@@ -6,9 +6,9 @@ import './detail-page.scss';
 /**
  * Detail page.
  *
- * @returns {React.FC} detail page
+ * @returns {JSX.Element} detail page
  */
-export const DetailPage: React.FC = () => {
+export const DetailPage: React.FC = (): JSX.Element => {
     const { id } = useParams();
 
     return (
