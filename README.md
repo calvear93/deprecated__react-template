@@ -30,13 +30,6 @@ target="_blank">Create React App</a>.
 ```bash
 ├── README.md
 ├── .vscode/ # vscode debug config
-├── deploy/
-│   ├── k8s/ # kubernetes manifests
-│   ├── templates/
-│   │   ├── read-project-info.stage.yml # reads package.json info for pipeline
-│   │   └── vars.template.yml # environment variables orchestrator for pipeline
-│   ├── Dockerfile
-│   └── azure-pipelines.yml
 ├── env/
 │   ├── exec/
 │   │   ├── env.schema.json # env vars schema
