@@ -33,7 +33,6 @@ target="_blank">Create React App</a>.
 ├── env/
 │   ├── exec/
 │   │   ├── env.schema.json # env vars schema
-│   │   ├── cmd.js # pull and push commands
 │   │   └── loader.js # environment variables loader for env-cmd
 │   ├── secrets/ # will contains dev.env.json, qa.env.json, etc.
 │   ├── appsettings.json # non secret environment variables
