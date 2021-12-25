@@ -20,7 +20,8 @@ declare global {
             // SECTION: base config
             PORT: string;
             PUBLIC_URL: string;
-            REACT_APP_DEBUG: string;
+            REACT_APP_DEBUG: 'true' | 'false';
+            REACT_APP_SERVICE_WORKER: 'true' | 'false';
             REACT_APP_BASE_PATH: string;
         }
     }
