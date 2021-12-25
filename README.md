@@ -25,6 +25,20 @@ href="http://www.typescriptlang.org" target="_blank">TypeScript</a>, and under
 the hood this skeleton uses <a href="https://create-react-app.dev/"
 target="_blank">Create React App</a>.
 
+### Easy SPA Webs using React CRA with TypeScript.
+
+Main feature are:
+
+-   `typescript` ready
+-   `eslint` with `prettier`
+-   `stylelint` for `css` and `sass`
+-   Environment variables handler using `env-cmd`
+-   `react suite` UI
+-   `react router` 6 with declarative routing handler
+-   `service worker` ready
+-   `redux` ready using `@redux-toolkit`
+-   `docker` ready
+
 ## ⛩ **Structure**
 
 ```bash
@@ -61,6 +75,7 @@ target="_blank">Create React App</a>.
 │   │   └── swal/ # sweetalert 2
 │   ├── env.d.ts # .env environment types declaration
 │   └── index.tsx
+├── Dockerfile
 ├── tsconfig.json
 ├── webpack.config.js # webpack config (craco)
 └── package.json
