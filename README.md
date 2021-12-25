@@ -153,7 +153,7 @@ use commands below:
 
 ## 🧿 **Linting**
 
-Project uses two linters, for code formatting and code styling normalizing.
+Project use linters, for code formatting and code styling normalizing.
 
 -   **[eslint](https://eslint.org/)**: tool for identifying and reporting on patterns found in ECMAScript/JavaScript code
 -   **[prettier](https://prettier.io/)**: opinionated code formatter
