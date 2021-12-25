@@ -5,11 +5,9 @@ import './app-layout.scss';
 /**
  * App layout (wrapper for pages with header/footer).
  *
- * @param {IAppLayoutProps} props
- *
- * @returns {React.FC<IAppLayoutProps>} app layout
+ * @returns {JSX.Element} app layout
  */
-export const AppLayout: React.FC = ({ children }) => (
+export const AppLayout: React.FC = ({ children }): JSX.Element => (
     <main id='app-layout'>
         <Header />
 

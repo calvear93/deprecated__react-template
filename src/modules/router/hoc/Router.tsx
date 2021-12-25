@@ -13,9 +13,11 @@ export interface IRouterProps {
  *
  * @param {IRouterProps} props
  *
- * @returns {React.FC<IRouterProps>} router - routes render
+ * @returns {JSX.Element} routes render
  */
-export const Router: React.FC<IRouterProps> = ({ loader = 'Loading' }) => {
+export const Router: React.FC<IRouterProps> = ({
+    loader = 'Loading'
+}): JSX.Element => {
     const { routes, DefaultChild } = routerService;
 
     return (

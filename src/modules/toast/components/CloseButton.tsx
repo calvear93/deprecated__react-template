@@ -1,4 +1,4 @@
-export interface CloseButtonProps {
+export interface ICloseButtonProps {
     closeToast?: React.MouseEventHandler<HTMLElement>;
 }
 
@@ -7,9 +7,11 @@ export interface CloseButtonProps {
  *
  * @param {CloseButtonProps} [options]
  *
- * @returns {React.FC<CloseButtonProps>}
+ * @returns {JSX.Element} close button
  */
-export const CloseButton: React.FC<CloseButtonProps> = ({ closeToast }) => (
+export const CloseButton: React.FC<ICloseButtonProps> = ({
+    closeToast
+}): JSX.Element => (
     <i
         className='close toastify-close-icon'
         onClick={closeToast}

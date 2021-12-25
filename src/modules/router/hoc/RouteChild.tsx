@@ -10,9 +10,11 @@ export interface IRouteChildProps {
  *
  * @param {IRouteChildProps} props
  *
- * @returns {React.FC<IRouteChildProps> | null} route child HOC
+ * @returns {JSX.Element | null} route child HOC
  */
-export const RouteChild: React.FC<IRouteChildProps> = ({ route }) => {
+export const RouteChild: React.FC<IRouteChildProps> = ({
+    route
+}): JSX.Element | null => {
     const { title, render: { layout: Layout, child: Child } = {} } = route;
 
     // sets up page tab title

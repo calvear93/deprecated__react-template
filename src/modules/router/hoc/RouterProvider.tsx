@@ -20,7 +20,7 @@ export type RouterProviderProps = Omit<BrowserRouterProps, 'basename'> &
  *
  * @param {RouterProviderProps} props
  *
- * @returns {React.FC<RouterProviderProps>} router provider HOC
+ * @returns {JSX.Element} router provider HOC
  */
 export const RouterProvider: React.FC<RouterProviderProps> = ({
     children,
@@ -28,7 +28,7 @@ export const RouterProvider: React.FC<RouterProviderProps> = ({
     basePath,
     defaultChild,
     ...rest
-}) => {
+}): JSX.Element => {
     // initializes the routes
     routerService.setRoutes(routes, defaultChild);
 
