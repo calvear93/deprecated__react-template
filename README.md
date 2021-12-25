@@ -70,7 +70,7 @@ target="_blank">Create React App</a>.
 
 -   Replace globally these terms:
 
-    -   `<base-path>` api base path, i.e. web (for get /web/*)
+    -   `<base-path>` api base path, i.e. web (for get /web/\*)
     -   `<app-name>` app name, i.e. home-web
     -   `<project-name>` project name, i.e. my-project
     -   `<project-title>` project title, i.e. My Project
@@ -155,8 +155,9 @@ use commands below:
 
 Project uses two linters, for code formatting and code styling normalizing.
 
--   **eslint**: linter with TypeScript parser and some other additions.
--   **stylelint**: linter for CSS, SASS with good practices.
+-   **[eslint](https://eslint.org/)**: tool for identifying and reporting on patterns found in ECMAScript/JavaScript code
+-   **[prettier](https://prettier.io/)**: opinionated code formatter
+-   **[stylelint](https://stylelint.io/)**: linter that helps you avoid errors and enforce conventions in your styles
 
 For correct interpretation of linters, is recommended to use [Visual Studio Code](https://code.visualstudio.com/) as IDE and install the plugins in .vscode folder at 'extensions.json'.
 
