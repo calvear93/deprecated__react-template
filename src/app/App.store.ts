@@ -5,14 +5,14 @@ import { sampleSlice } from 'slices/sample.slice';
 import { asyncSlice } from 'pages/detail/slices/async.slice';
 
 const DEBUG = process.env.REACT_APP_DEBUG === 'true';
-const DEV = process.env.NODE_ENV !== 'production';
+const REDUX_LOGGER_ENABLED = process.env.REACT_APP_REDUX_LOGGER === 'true';
 
 /**
  * Creates a redux store.
  */
 export const AppStore = configureStore({
-    middleware: configureMiddleware(DEBUG),
-    devTools: DEV,
+    middleware: configureMiddleware(REDUX_LOGGER_ENABLED),
+    devTools: DEBUG,
     reducer: {
         [sampleSlice.name]: sampleSlice.reducer,
         [asyncSlice.name]: asyncSlice.reducer

@@ -23,6 +23,7 @@ declare global {
             REACT_APP_DEBUG: 'true' | 'false';
             REACT_APP_SERVICE_WORKER: 'true' | 'false';
             REACT_APP_BASE_PATH: string;
+            REACT_APP_REDUX_LOGGER: string;
         }
     }
 

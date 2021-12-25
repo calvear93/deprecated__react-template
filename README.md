@@ -93,6 +93,17 @@ Main feature are:
     -   `<project-title>` project title, i.e. My Project
     -   `<project-description>` project description, i.e. Web for show account info
 
+-   Configure your api config for local dev environment.
+
+    -   Configure your `dev.local.env.json` file in `env/secrets` folder as:
+
+    ```json
+    {
+        "PUBLIC_URL": "",
+        "REACT_APP_BASE_PATH": "/"
+    }
+    ```
+
 -   Install [NodeJS](https://nodejs.org/es/) for your machine.
 -   Execute `npm install` command. (`npm i --force` in case of conflicts).
 -   Execute the app with `npm run start:dev`.
