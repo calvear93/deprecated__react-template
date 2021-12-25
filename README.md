@@ -90,7 +90,7 @@ target="_blank">Create React App</a>.
 
 ## 📋 **Branches and Environments**
 
-Project has 4 environments (infrastructure) base for project building.
+Project has 3 environments (infrastructure) base for project building.
 
 -   **dev (development)**: environment with breaking changes and new features.
 -   **qa (quality assurance)**: environment for testing and quality assurance.
