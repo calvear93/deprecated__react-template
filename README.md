@@ -36,7 +36,6 @@ Main feature are:
 -   `react router` 6 with declarative routing handler
 -   `service worker` ready
 -   `redux` ready using `@redux-toolkit`
--   `react-toastify` and `sweet alert 2`
 -   `docker` ready
 
 ## ⛩ **Structure**
