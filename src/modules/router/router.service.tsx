@@ -39,7 +39,7 @@ class RouterService {
      * @type {React.FC}
      * @returns {JSX.Element}
      */
-    private _DefaultChild: React.FC = (): JSX.Element => (
+    private _DefaultChild: React.VFC = (): JSX.Element => (
         <Navigate to={this._basePath} />
     );
 

@@ -8,8 +8,6 @@ export interface IRouterProviderProps {
     basePath?: string;
 
     defaultChild?: React.ReactNode;
-
-    children?: React.ReactNode | React.ReactNode[];
 }
 
 export type RouterProviderProps = Omit<BrowserRouterProps, 'basename'> &

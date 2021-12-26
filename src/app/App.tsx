@@ -16,7 +16,7 @@ import './styles/app.scss';
  *
  * @returns {JSX.Element} app container
  */
-export const App: React.FC = (): JSX.Element => {
+export const App: React.VFC = (): JSX.Element => {
     return (
         <UIProvider>
             <RouterProvider

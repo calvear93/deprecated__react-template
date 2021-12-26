@@ -3,7 +3,7 @@ import { Button } from 'rsuite';
 import { useAsyncFetch } from '../hooks/useAsyncFetch.hook';
 import styles from './detail.module.scss';
 
-export const FetchBox: React.FC = () => {
+export const FetchBox: React.VFC = () => {
     const [{ loading, content }, dispatchFetch] = useAsyncFetch();
 
     return (

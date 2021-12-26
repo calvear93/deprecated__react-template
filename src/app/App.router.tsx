@@ -8,6 +8,6 @@ import { Router } from '@router';
  *
  * @returns {JSX.Element} application main router
  */
-export const AppRouter: React.FC = (): JSX.Element => {
+export const AppRouter: React.VFC = (): JSX.Element => {
     return <Router loader={<h1>Loading</h1>} />;
 };

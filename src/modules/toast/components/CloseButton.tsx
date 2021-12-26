@@ -5,11 +5,11 @@ export interface ICloseButtonProps {
 /**
  * Button for close toast.
  *
- * @param {CloseButtonProps} [options]
+ * @param {ICloseButtonProps} [options]
  *
  * @returns {JSX.Element} close button
  */
-export const CloseButton: React.FC<ICloseButtonProps> = ({
+export const CloseButton: React.VFC<ICloseButtonProps> = ({
     closeToast
 }): JSX.Element => (
     <i

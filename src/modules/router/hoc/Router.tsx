@@ -15,7 +15,7 @@ export interface IRouterProps {
  *
  * @returns {JSX.Element} routes render
  */
-export const Router: React.FC<IRouterProps> = ({
+export const Router: React.VFC<IRouterProps> = ({
     loader = 'Loading'
 }): JSX.Element => {
     const { routes, DefaultChild } = routerService;

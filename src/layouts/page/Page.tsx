@@ -2,8 +2,6 @@ import './page.scss';
 
 export interface IPageProps {
     id: string;
-
-    children?: React.ReactNode | React.ReactNode[];
 }
 
 /**

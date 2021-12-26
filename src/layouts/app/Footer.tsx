@@ -9,7 +9,7 @@ interface IFooterPayload {
  *
  * @returns {JSX.Element} footer component
  */
-export const Footer: React.FC = (): JSX.Element => {
+export const Footer: React.VFC = (): JSX.Element => {
     const { footer: { text } = {} } = useRoutePayload<IFooterPayload>();
 
     return <footer>{text}</footer>;
