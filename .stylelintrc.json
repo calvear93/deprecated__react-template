@@ -30,12 +30,37 @@
             true,
             {
                 "ignoreAtRules": [
+                    "apply",
+                    "each",
                     "function",
                     "if",
-                    "each",
                     "include",
+                    "layer",
                     "mixin",
-                    "return"
+                    "responsive",
+                    "return",
+                    "screen",
+                    "tailwind",
+                    "variants"
+                ]
+            }
+        ],
+        "scss/at-rule-no-unknown": [
+            true,
+            {
+                "ignoreAtRules": [
+                    "apply",
+                    "each",
+                    "function",
+                    "if",
+                    "include",
+                    "layer",
+                    "mixin",
+                    "responsive",
+                    "return",
+                    "screen",
+                    "tailwind",
+                    "variants"
                 ]
             }
         ],

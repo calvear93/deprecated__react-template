@@ -33,7 +33,6 @@ Main feature are:
 -   `eslint` with `prettier`
 -   `stylelint` for `css` and `sass`
 -   Environment variables handler using `env-cmd`
--   `react suite` UI
 -   `react router` 6 with declarative routing handler
 -   `service worker` ready
 -   `redux` ready using `@redux-toolkit`
@@ -70,7 +69,6 @@ Main feature are:
 │   ├── tests/ # e2e tests
 │   ├── modules/ # libraries shared with other apps
 │   │   ├── router/ # routing using react router v6
-│   │   ├── ui/ # react suite initializer
 │   │   ├── toast/ # react-toastify
 │   │   └── swal/ # sweetalert 2
 │   ├── env.d.ts # .env environment types declaration
@@ -217,7 +215,6 @@ use commands below:
 ## 🧮 **Built with**
 
 -   [Create React App](https://github.com/facebook/create-react-app) - Official React SPA framework.
--   [React Suite](https://rsuitejs.com/) - UI framework.
 -   [env-cmd](https://github.com/toddbluhm/env-cmd) - NodeJS app's environment utility.
 -   [craco](https://github.com/gsoft-inc/craco) - CRA webpack config injector.
 -   [Material Design Icons](https://materialdesignicons.com/)

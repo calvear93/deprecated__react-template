@@ -5,12 +5,8 @@
         "paths": {
             "@router": ["modules/router"],
             "@router/*": ["modules/router/*"],
-            "@ui": ["modules/ui"],
-            "@ui/*": ["modules/ui/*"],
             "@libs/*": ["modules/libs/*"],
             "@hooks/*": ["modules/hooks/*"],
-            "@toast": ["modules/toast/toast.tsx"],
-            "@swal": ["modules/swal/swal.ts"],
             "@web-font": ["modules/web-font/web-font.scss"]
         },
 
