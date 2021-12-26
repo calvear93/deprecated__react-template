@@ -1,18 +1,17 @@
 import './page.scss';
 
-export interface IPageProps {
-    id: string;
-}
-
 /**
  * A generic page.
  *
- * @param {IPageProps} props
+ * @param {React.HTMLProps<HTMLElement>} props
  *
  * @returns {JSX.Element} page
  */
-export const Page: React.FC<IPageProps> = ({ id, children }): JSX.Element => (
-    <section id={id} className='page'>
+export const Page: React.FC<React.HTMLProps<HTMLElement>> = ({
+    children,
+    ...rest
+}): JSX.Element => (
+    <section className='page' {...rest}>
         {children}
     </section>
 );
