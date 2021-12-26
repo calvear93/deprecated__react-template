@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { Footer } from './Footer';
 import { Header } from './Header';
 import './app-layout.scss';
@@ -17,4 +18,4 @@ export const AppLayout: React.FC = ({ children }): JSX.Element => (
     </main>
 );
 
-export default AppLayout;
+export default memo(AppLayout);
