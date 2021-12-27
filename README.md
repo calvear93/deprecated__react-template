@@ -63,7 +63,7 @@ Main feature are:
 │   ├── hooks/ # shared hooks
 │   ├── layouts/ # app layouts and containers
 │   ├── pages/ # app pages, loaded in app/app.routes.ts
-│   ├── services/ # adapters, api connections
+│   ├── providers/ # adapters, api connections
 │   ├── slices/ # redux reducers and actions
 │   ├── tests/ # e2e tests
 │   ├── modules/ # libraries shared with other apps
