@@ -6,8 +6,16 @@ import {
     ArrayStateFilterAction,
     ArrayStateSortAction
 } from './helpers/array.reducer';
-import { queueReducer, QueueStateAction, QueueStateController } from './helpers/queue.reducer';
-import { stackReducer, StackStateAction, StackStateController } from './helpers/stack.reducer';
+import {
+    queueReducer,
+    QueueStateAction,
+    QueueStateController
+} from './helpers/queue.reducer';
+import {
+    stackReducer,
+    StackStateAction,
+    StackStateController
+} from './helpers/stack.reducer';
 
 type DictionaryKey = keyof any;
 
@@ -117,9 +125,11 @@ export function useArray<T>(def?: T[]): [T[], ArrayStateController<T>] {
 
             remove: (item: T) => dispatch({ type: 'remove', payload: item }),
 
-            removeAt: (index: number) => dispatch({ type: 'removeAt', payload: index }),
+            removeAt: (index: number) =>
+                dispatch({ type: 'removeAt', payload: index }),
 
-            sort: (sort: ArrayStateSortAction<T>) => dispatch({ type: 'sort', payload: sort }),
+            sort: (sort: ArrayStateSortAction<T>) =>
+                dispatch({ type: 'sort', payload: sort }),
 
             filter: (filter: ArrayStateFilterAction<T>) =>
                 dispatch({ type: 'filter', payload: filter }),

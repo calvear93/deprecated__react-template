@@ -2,8 +2,9 @@ import { BrowserRouter, BrowserRouterProps } from 'react-router-dom';
 import { IRouteDefinition } from '../interfaces/IRouteDefinition';
 import { routerService } from '../router.service';
 
-export interface IRouterProviderProps extends Omit<BrowserRouterProps, 'basename'> {
-    routes: IRouteDefinition[];
+export interface IRouterProviderProps
+    extends Omit<BrowserRouterProps, 'basename'> {
+    routes: readonly IRouteDefinition[];
 
     basePath?: string;
 

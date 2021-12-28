@@ -104,7 +104,11 @@ export function formatDateTime(
     if (typeof date !== 'object') date = new Date(date);
 
     return isValid(date)
-        ? format(date, formatPattern ?? `${FORMAT.DATE_FORMAT} ${timeFormatChooser(format24)}`)
+        ? format(
+              date,
+              formatPattern ??
+                  `${FORMAT.DATE_FORMAT} ${timeFormatChooser(format24)}`
+          )
         : MESSAGES.DATE_NO_VALID;
 }
 
@@ -150,10 +154,17 @@ export function toNaturalDate(date: Date | string | number): string {
  *
  * @returns {string} natural datetime.
  */
-export function toNaturalDateTime(date: Date | string | number, format24: boolean = true): string {
+export function toNaturalDateTime(
+    date: Date | string | number,
+    format24: boolean = true
+): string {
     if (typeof date !== 'object') date = new Date(date);
 
-    return format(date, `${FORMAT.NATURAL_DATETIME_FORMAT}${timeFormatChooser(format24)}`, LOCALE);
+    return format(
+        date,
+        `${FORMAT.NATURAL_DATETIME_FORMAT}${timeFormatChooser(format24)}`,
+        LOCALE
+    );
 }
 
 /**
@@ -164,7 +175,10 @@ export function toNaturalDateTime(date: Date | string | number, format24: boolea
  *
  * @returns {string} age from date
  */
-export function toAgeByBirth(date: Date | string | number, showDays: boolean = false): string {
+export function toAgeByBirth(
+    date: Date | string | number,
+    showDays: boolean = false
+): string {
     if (typeof date !== 'object') date = new Date(date);
 
     const today = new Date();

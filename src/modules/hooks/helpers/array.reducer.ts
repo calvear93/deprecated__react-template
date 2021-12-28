@@ -1,6 +1,10 @@
 export type ArrayStateSortAction<T> = ((a: T, b: T) => number) | undefined;
 
-export type ArrayStateFilterAction<T> = (value: T, index: number, array: T[]) => value is T;
+export type ArrayStateFilterAction<T> = (
+    value: T,
+    index: number,
+    array: T[]
+) => value is T;
 
 export interface ArrayStateController<T> {
     append: (item: T) => void;
@@ -79,7 +83,10 @@ export function arrayReducer<T>(state: T[], action: ArrayStateAction<T>): T[] {
 
         // removes element at specified index
         case 'removeAt':
-            return [...state.slice(0, action.payload - 1), ...state.slice(action.payload)];
+            return [
+                ...state.slice(0, action.payload - 1),
+                ...state.slice(action.payload)
+            ];
 
         // sorts array items
         case 'sort':

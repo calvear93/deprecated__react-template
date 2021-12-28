@@ -15,7 +15,9 @@ export interface IRouterProps {
  *
  * @returns {JSX.Element} routes render
  */
-export const Router: React.VFC<IRouterProps> = ({ loader = 'Loading' }): JSX.Element => {
+export const Router: React.VFC<IRouterProps> = ({
+    loader = 'Loading'
+}): JSX.Element => {
     const { routes, DefaultChild } = routerService;
 
     return (
@@ -28,7 +30,11 @@ export const Router: React.VFC<IRouterProps> = ({ loader = 'Loading' }): JSX.Ele
 
                         // renders the route
                         return (
-                            <Route key={path} path={path} element={<RouteChild route={route} />} />
+                            <Route
+                                key={path}
+                                path={path}
+                                element={<RouteChild route={route} />}
+                            />
                         );
                     })
                 }

@@ -28,7 +28,9 @@ export function useRoutePayload<T>(): T {
     const { pathname } = useLocation();
     const { routes } = routerService;
 
-    return routes.find((r) => r.path && matchPath(r.path, pathname))?.payload ?? {};
+    return (
+        routes.find((r) => r.path && matchPath(r.path, pathname))?.payload ?? {}
+    );
 }
 
 /**
