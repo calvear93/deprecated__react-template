@@ -1,8 +1,5 @@
 import { Navigate } from 'react-router-dom';
-import {
-    IRouteDefinition,
-    RouteRenderComponent
-} from './interfaces/IRouteDefinition';
+import { IRouteDefinition, RouteRenderComponent } from './interfaces/IRouteDefinition';
 
 /**
  * Routes handler for expose
@@ -39,9 +36,7 @@ class RouterService {
      * @type {React.FC}
      * @returns {JSX.Element}
      */
-    private _DefaultChild: React.VFC = (): JSX.Element => (
-        <Navigate to={this._basePath} />
-    );
+    private _DefaultChild: React.VFC = (): JSX.Element => <Navigate to={this._basePath} />;
 
     /**
      * Return routes.

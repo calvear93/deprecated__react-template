@@ -27,10 +27,7 @@ export function removeUnderscore(str: string): string {
 export function capitalizeAfterPeriod(str: string): string {
     if (!str) return '';
 
-    return str.replace(
-        /([.!?-]+\s*)([a-z])/g,
-        (_, $1, $2) => $1 + $2.toUpperCase()
-    );
+    return str.replace(/([.!?-]+\s*)([a-z])/g, (_, $1, $2) => $1 + $2.toUpperCase());
 }
 
 /**

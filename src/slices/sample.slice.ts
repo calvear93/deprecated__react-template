@@ -44,6 +44,4 @@ export const sampleSlice = createSlice({
 });
 
 export const useSampleSelector = () =>
-    useSelector<AppState, SampleState>(
-        ({ [sampleSlice.name]: slice }) => slice
-    );
+    useSelector<AppState, SampleState>(({ [sampleSlice.name]: slice }) => slice);

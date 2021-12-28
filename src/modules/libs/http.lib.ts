@@ -69,10 +69,7 @@ function errorMessageInterceptor(error: AxiosError) {
  *
  * @returns {AxiosInstance} axios http client.
  */
-export function createHttpClient(
-    baseURL: string,
-    headers: object
-): AxiosInstance {
+export function createHttpClient(baseURL: string, headers: object): AxiosInstance {
     // creates an axios instance pre-configured.
     const client = axios.create({
         baseURL,

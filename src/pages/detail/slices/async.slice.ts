@@ -81,6 +81,4 @@ export const asyncSlice = createSlice({
 });
 
 export const useAsyncFetchSelector = () =>
-    useSelector<AppState, FetchSampleAsyncState>(
-        ({ [asyncSlice.name]: slice }) => slice
-    );
+    useSelector<AppState, FetchSampleAsyncState>(({ [asyncSlice.name]: slice }) => slice);

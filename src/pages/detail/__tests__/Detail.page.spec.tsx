@@ -1,11 +1,5 @@
 import { MemoryRouter } from '@router';
-import {
-    cleanup,
-    fireEvent,
-    render,
-    screen,
-    waitFor
-} from '@testing-library/react';
+import { cleanup, fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { AppStore } from 'app';
 import { Provider } from 'react-redux';
 import { DetailPage } from '../Detail.page';

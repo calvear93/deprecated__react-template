@@ -16,10 +16,7 @@ import './styles/app.scss';
  */
 export const App: React.VFC = (): JSX.Element => {
     return (
-        <RouterProvider
-            routes={routes}
-            basePath={process.env.REACT_APP_BASE_PATH}
-        >
+        <RouterProvider routes={routes} basePath={process.env.REACT_APP_BASE_PATH}>
             <Provider store={AppStore}>
                 <AppRouter />
             </Provider>

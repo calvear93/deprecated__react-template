@@ -30,10 +30,7 @@ export interface StorageContainerData<T> {
  *
  * @returns {T} wrapped function
  */
-export function memoizedAsyncCallback<
-    I,
-    T extends (...args: any[]) => Promise<I>
->(
+export function memoizedAsyncCallback<I, T extends (...args: any[]) => Promise<I>>(
     key: string,
     getter: T,
     expiration: number = 0,
@@ -42,8 +39,7 @@ export function memoizedAsyncCallback<
     const store = storage[storageType];
 
     return async (...args: Parameters<T>) => {
-        const cache: StorageContainerData<ReturnType<T>> | undefined =
-            store.get(key);
+        const cache: StorageContainerData<ReturnType<T>> | undefined = store.get(key);
 
         if (cache && cache.expiration > 0 && Date.now() < cache.expiration)
             return Promise.resolve(cache.data);

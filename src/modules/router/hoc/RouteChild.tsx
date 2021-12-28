@@ -2,7 +2,7 @@ import { IRouteDefinition } from '@router';
 import { useEffect } from 'react';
 
 export interface IRouteChildProps {
-    readonly route: IRouteDefinition;
+    route: IRouteDefinition;
 }
 
 /**
@@ -12,9 +12,7 @@ export interface IRouteChildProps {
  *
  * @returns {JSX.Element | null} route child HOC
  */
-export const RouteChild: React.VFC<IRouteChildProps> = ({
-    route
-}): JSX.Element | null => {
+export const RouteChild: React.VFC<IRouteChildProps> = ({ route }): JSX.Element | null => {
     const { title, render: { layout: Layout, child: Child } = {} } = route;
 
     // sets up page tab title

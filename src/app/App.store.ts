@@ -5,8 +5,7 @@ import { sampleSlice } from 'slices/sample.slice';
 import { asyncSlice } from 'pages/detail/slices/async.slice';
 
 const DEBUG = process.env.REACT_APP_DEBUG === 'true';
-const DEV =
-    process.env.NODE_ENV !== 'test' && process.env.REACT_APP_ENV !== 'prod';
+const DEV = process.env.NODE_ENV !== 'test' && process.env.REACT_APP_ENV !== 'prod';
 
 /**
  * Creates a redux store.
