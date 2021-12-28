@@ -2,7 +2,7 @@ import { IRouteDefinition } from '@router';
 import { useEffect } from 'react';
 
 export interface IRouteChildProps {
-    route: IRouteDefinition;
+    readonly route: IRouteDefinition;
 }
 
 /**

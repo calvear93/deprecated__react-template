@@ -164,6 +164,7 @@ export function useQueue<T>(def?: T[]): [T[], QueueStateController<T>] {
         state,
         {
             enqueue: (item: T) => dispatch({ type: 'enqueue', payload: item }),
+
             dequeue: () => {
                 if (state.length === 0) return undefined;
 
@@ -171,7 +172,9 @@ export function useQueue<T>(def?: T[]): [T[], QueueStateController<T>] {
 
                 return state[0];
             },
+
             peek: () => state[0],
+
             clear: () => dispatch({ type: 'clear' })
         }
     ];
@@ -202,6 +205,7 @@ export function useStack<T>(def?: T[]): [T[], StackStateController<T>] {
         state,
         {
             push: (item: T) => dispatch({ type: 'push', payload: item }),
+
             pop: () => {
                 if (state.length === 0) return undefined;
 
@@ -209,7 +213,9 @@ export function useStack<T>(def?: T[]): [T[], StackStateController<T>] {
 
                 return state[0];
             },
+
             peek: () => state[0],
+
             clear: () => dispatch({ type: 'clear' })
         }
     ];

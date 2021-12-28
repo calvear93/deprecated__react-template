@@ -2,25 +2,23 @@ import { BrowserRouter, BrowserRouterProps } from 'react-router-dom';
 import { IRouteDefinition } from '../interfaces/IRouteDefinition';
 import { routerService } from '../router.service';
 
-export interface IRouterProviderProps {
-    routes: readonly IRouteDefinition[];
+export interface IRouterProviderProps
+    extends Omit<BrowserRouterProps, 'basename'> {
+    readonly routes: IRouteDefinition[];
 
     basePath?: string;
 
     defaultChild?: React.ReactNode;
 }
 
-export type RouterProviderProps = Omit<BrowserRouterProps, 'basename'> &
-    IRouterProviderProps;
-
 /**
  * Initializes application routes.
  *
- * @param {RouterProviderProps} props
+ * @param {IRouterProviderProps} props
  *
  * @returns {JSX.Element} router provider HOC
  */
-export const RouterProvider: React.FC<RouterProviderProps> = ({
+export const RouterProvider: React.FC<IRouterProviderProps> = ({
     children,
     routes,
     basePath,
