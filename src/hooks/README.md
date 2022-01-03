@@ -1,3 +1,3 @@
 #### Hooks
 
-Global/shared hooks.
+Shared app hooks.

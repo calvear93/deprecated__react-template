@@ -19,3 +19,7 @@ store.
 ## 3. Styles
 
 `styles` folder contains global styles.
+
+## 4. Assets
+
+`assets` folder contains global assets.

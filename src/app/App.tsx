@@ -28,5 +28,8 @@ export const App: React.VFC = (): JSX.Element => {
  * unregister() to register() below. Note this comes with some pitfalls.
  * Learn more about service workers: https://cra.link/PWA
  */
-if (process.env.REACT_APP_SERVICE_WORKER === 'true')
-    require('./config/service-worker.register').register();
+if (process.env.REACT_APP_SERVICE_WORKER === 'true') {
+    import('./config/service-worker.register').then((worker) =>
+        worker.register()
+    );
+}

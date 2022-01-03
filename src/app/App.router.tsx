@@ -9,12 +9,12 @@ const Router = createRouter({
 });
 
 /**
- * Application main routing handler.
+ * Application routing handler.
  *
  * Here you can define logic for authorization
  * redirection or app splitting.
  *
- * @returns {JSX.Element} application main router
+ * @returns {JSX.Element} application router
  */
 export const AppRouter: React.VFC = (): JSX.Element => {
     return <Router />;
