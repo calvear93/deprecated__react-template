@@ -1,14 +1,14 @@
-import { ReactElement, Suspense } from 'react';
+import { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { routerService } from '../router.service';
 import { RouteChild } from './RouteChild';
 
 export interface IRouterProps {
-    loader?: string | ReactElement;
+    loader?: string | React.ReactNode;
 }
 
 /**
- *Handle routes rendering
+ * Handle routes rendering
  * using React Router.
  *
  * @param {IRouterProps} props
