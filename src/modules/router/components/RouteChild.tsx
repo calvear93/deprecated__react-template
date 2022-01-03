@@ -10,7 +10,7 @@ export interface IRouteChildProps {
  *
  * @param {IRouteChildProps} props
  *
- * @returns {JSX.Element | null} route child HOC
+ * @returns {JSX.Element | null} route child
  */
 export const RouteChild: React.VFC<IRouteChildProps> = ({
     route

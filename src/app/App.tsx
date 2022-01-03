@@ -1,8 +1,7 @@
 import { Provider } from 'react-redux';
-import { RouterProvider } from '@router';
+import { BrowserRouter } from '@router';
 import { AppStore } from './App.store';
 import { AppRouter } from './App.router';
-import { routes } from './app.routes';
 import '@web-font';
 import './styles/app.scss';
 
@@ -16,14 +15,11 @@ import './styles/app.scss';
  */
 export const App: React.VFC = (): JSX.Element => {
     return (
-        <RouterProvider
-            routes={routes}
-            basePath={process.env.REACT_APP_BASE_PATH}
-        >
+        <BrowserRouter basename={process.env.REACT_APP_BASE_PATH}>
             <Provider store={AppStore}>
                 <AppRouter />
             </Provider>
-        </RouterProvider>
+        </BrowserRouter>
     );
 };
 

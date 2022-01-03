@@ -1,4 +1,12 @@
-import { Router } from '@router';
+import { createRouter } from '@router';
+import { routes } from './app.routes';
+
+// creates a router
+const Router = createRouter({
+    routes: routes.app,
+    loader: <h1>Loading</h1>,
+    fallback: <h1>Not Found</h1>
+});
 
 /**
  * Application main routing handler.
@@ -9,5 +17,5 @@ import { Router } from '@router';
  * @returns {JSX.Element} application main router
  */
 export const AppRouter: React.VFC = (): JSX.Element => {
-    return <Router loader={<h1>Loading</h1>} />;
+    return <Router />;
 };

@@ -1,5 +1,7 @@
-#### React SPA Routerizer
+#### Router Module
 
-Depende of:
+Eases routes handling and optimizes router rendering.
+
+Depends of:
 
     - 'react-router-dom'

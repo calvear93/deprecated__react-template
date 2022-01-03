@@ -26,7 +26,7 @@ import { routerService } from './router.service';
  */
 export function useRoutePayload<T>(): T {
     const { pathname } = useLocation();
-    const { routes } = routerService;
+    const { routes = [] } = routerService;
 
     return (
         routes.find((r) => r.path && matchPath(r.path, pathname))?.payload ?? {}

@@ -1,4 +1,3 @@
-import { Navigate } from 'react-router-dom';
 import {
     IRouteDefinition,
     RouteRenderComponent
@@ -15,33 +14,7 @@ class RouterService {
      * @private
      * @type {IRouteDefinition[]}
      */
-    private _routes: IRouteDefinition[];
-
-    /**
-     * Application router base path
-     *
-     * @private
-     * @type {string}
-     */
-    private _basePath: string = '/';
-
-    /**
-     * Raw routes definition
-     *
-     * @private
-     * @type {IRouteDefinition[]}
-     */
-    private _rawRoutes: IRouteDefinition[];
-
-    /**
-     * Default component for show on no route found
-     *
-     * @type {React.FC}
-     * @returns {JSX.Element}
-     */
-    private _DefaultChild: React.VFC = (): JSX.Element => (
-        <Navigate to={this._basePath} />
-    );
+    private _routes: IRouteDefinition[] = [];
 
     /**
      * Return routes.
@@ -53,48 +26,54 @@ class RouterService {
     }
 
     /**
-     * Return DefaultChild.
+     * Flattens a route definition
+     * four router rendering.
      *
-     * @readonly
-     */
-    get DefaultChild() {
-        return this._DefaultChild;
-    }
-
-    /**
-     * Initiates complete path calc
-     * for routes and nested routes.
+     * @param {IRouteDefinition[]} routesDefinition
+     * @param {string} basePath
+     * @param {RouteRenderComponent} parentLayout
+     * @param {RouteRenderComponent} parentPayload
      *
-     * @param {Array<object>} routes routes definitions
-     * @param {React.ReactElement} [defaultChild] default child for render
+     * @returns {IRouteDefinition[]} flattened routes
      */
-    setRoutes(routes: any, defaultChild: any): void {
-        if (routes === this._rawRoutes) return;
-
-        this._routes = [];
-        this._rawRoutes = routes;
-        this._DefaultChild = defaultChild ?? this.DefaultChild;
-
-        this._setRoutes(routes, this._basePath);
-    }
-
-    /**
-     * Sets current app routes definitions
-     * and calculates complete router paths
-     * for nested routes.
-     *
-     * @param {Array<object>} routes routes definitions
-     * @param {string} [basePath] routes base path
-     * @param {ReactElement} [parentLayout] layout from parent
-     * @param {object} [parentPayload] payload from parent
-     */
-    private _setRoutes(
-        routes: IRouteDefinition[],
+    createRoutes(
+        routesDefinition: IRouteDefinition[],
         basePath: string,
         parentLayout?: RouteRenderComponent,
         parentPayload?: RouteRenderComponent
-    ) {
-        for (const route of routes) {
+    ): IRouteDefinition[] {
+        const routes = this._createRoutes(
+            routesDefinition,
+            basePath,
+            parentLayout,
+            parentPayload
+        );
+
+        this._routes = this._routes.concat(routes);
+
+        return routes;
+    }
+
+    /**
+     * Flattens a route definition
+     * four router rendering.
+     *
+     * @param {IRouteDefinition[]} routesDefinition
+     * @param {string} basePath
+     * @param {RouteRenderComponent} parentLayout
+     * @param {RouteRenderComponent} parentPayload
+     * @param {IRouteDefinition[]} [routes]
+     *
+     * @returns {IRouteDefinition[]} flattened routes
+     */
+    private _createRoutes(
+        routesDefinition: IRouteDefinition[],
+        basePath: string,
+        parentLayout?: RouteRenderComponent,
+        parentPayload?: RouteRenderComponent,
+        routes: IRouteDefinition[] = []
+    ): IRouteDefinition[] {
+        for (const route of routesDefinition) {
             const {
                 title,
                 path: relativePath = '',
@@ -106,7 +85,7 @@ class RouterService {
             const path = (basePath + '/' + relativePath).replace(/\/+/g, '/');
 
             if (child) {
-                this._routes.push({
+                routes.push({
                     title,
                     path,
                     render: {
@@ -122,12 +101,20 @@ class RouterService {
             }
 
             if (children) {
-                this._setRoutes(children, path, layout, {
-                    ...parentPayload,
-                    ...payload
-                });
+                this._createRoutes(
+                    children,
+                    path,
+                    layout,
+                    {
+                        ...parentPayload,
+                        ...payload
+                    },
+                    routes
+                );
             }
         }
+
+        return routes;
     }
 }
 
