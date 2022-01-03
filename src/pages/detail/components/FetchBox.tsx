@@ -1,6 +1,6 @@
 import { ReactComponent as Logo } from 'app/assets/logo.svg';
 import { useAsyncFetch } from '../hooks/useAsyncFetch.hook';
-import styles from './detail.module.scss';
+import styles from './fetch-box.module.scss';
 
 export const FetchBox: React.VFC = () => {
     const [{ loading, content }, dispatchFetch] = useAsyncFetch();
