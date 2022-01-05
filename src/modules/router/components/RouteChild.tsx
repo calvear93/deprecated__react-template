@@ -1,5 +1,5 @@
-import { IRouteDefinition } from '@router';
 import { useEffect } from 'react';
+import { IRouteDefinition } from '../interfaces/IRouteDefinition';
 
 export interface IRouteChildProps {
     route: IRouteDefinition;

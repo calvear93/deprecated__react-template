@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { Footer } from './Footer';
 import { Header } from './Header';
-import './app-layout.scss';
+import styles from './app.layout.module.scss';
 
 /**
  * App layout (wrapper for pages with header/footer).
@@ -9,7 +9,7 @@ import './app-layout.scss';
  * @returns {JSX.Element} app layout
  */
 export const AppLayout: React.FC = ({ children }): JSX.Element => (
-    <main id='app-layout'>
+    <main className={styles.layout}>
         <Header />
 
         {children}
