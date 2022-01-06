@@ -23,6 +23,8 @@ module.exports = {
                 ".d.ts",
                 "src/app",
                 "src/modules",
+                "service-worker.ts",
+                "tests",
                 "__tests__",
                 "__mocks__"
             ]
