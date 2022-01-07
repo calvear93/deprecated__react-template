@@ -157,13 +157,6 @@ it environment may be 'dev', 'qa' or 'prod'.
 | git subtree pull --prefix `<path>` `<remote-name>` `<branch>` [--squash] | pulls from subtree  |
 | git subtree push --prefix `<path>` `<remote-name>` `<branch>` [--squash] | push subtree change |
 
-use commands below:
-
-| Command                                                               | Action                          |
-| --------------------------------------------------------------------- | ------------------------------- |
-| git subtree split --prefix `<path>` --onto=`<remote-name>`/`<branch>` | splits a subtree for force push |
-| git push ui-core `<hash-returned-previous-cmd>`:`<branch>` --force    | force push                      |
-
 ## 🧿 **Linting**
 
 Project use linters, for code formatting and code styling normalizing.
