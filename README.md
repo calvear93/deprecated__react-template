@@ -201,7 +201,7 @@ use commands below:
 
 | Command                                                                            | Action                          |
 | ---------------------------------------------------------------------------------- | ------------------------------- |
-| git subtree split --prefix `<path>` --onto=`<remote-name>`/`<branch>`              | splits a subtree for force push |
+| git subtree split --prefix `<path>` --onto=`<subtree-remote-name>`/`<branch>`              | splits a subtree for force push |
 | git push `<subtree-remote-name>` `<hash-returned-previous-cmd>`:`<branch>` --force | force push                      |
 
 ## 🧮 **Built with**
