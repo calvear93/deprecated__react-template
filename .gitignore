@@ -2,9 +2,9 @@
 /node_modules
 
 # testing
+__reports__
 **/coverage
 **/__coverage__
-junit.xml
 
 # artifacts
 /dist

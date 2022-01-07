@@ -14,7 +14,7 @@ module.exports = {
             "verbose": true,
             "slowTestThreshold": 10,
             "testTimeout": 30000,
-            "coverageDirectory": "src/tests/__coverage__",
+            "coverageDirectory": "__reports__/coverage",
             "collectCoverageFrom": [
                 "src/**/*.(t|j)s"
             ],
@@ -25,6 +25,7 @@ module.exports = {
                 "src/modules",
                 "service-worker.ts",
                 "tests",
+                "__reports__",
                 "__tests__",
                 "__mocks__"
             ]
