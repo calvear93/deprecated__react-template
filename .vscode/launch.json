@@ -17,6 +17,54 @@
 			"name": "Debug in Chrome",
 			"url": "http://localhost:3001",
 			"webRoot": "${workspaceFolder}"
+		},
+		{
+			"name": "Debug Test (dev)",
+			"type": "node",
+			"request": "launch",
+			"cwd": "${workspaceRoot}",
+			"sourceMaps": true,
+			"restart": true,
+			"disableOptimisticBPs": true,
+			"runtimeExecutable": "npm",
+			"runtimeArgs": [
+				"run",
+				"test:dev",
+				"--",
+				"${fileBasenameNoExtension}",
+				"--runInBand",
+				"-no-cache"
+			],
+			"skipFiles": [
+				"<node_internals>/**/*.js"
+			],
+			"protocol": "inspector",
+			"console": "integratedTerminal",
+			"internalConsoleOptions": "neverOpen"
+		},
+		{
+			"name": "Debug Test (qa)",
+			"type": "node",
+			"request": "launch",
+			"cwd": "${workspaceRoot}",
+			"sourceMaps": true,
+			"restart": true,
+			"disableOptimisticBPs": true,
+			"runtimeExecutable": "npm",
+			"runtimeArgs": [
+				"run",
+				"test:qa",
+				"--",
+				"${fileBasenameNoExtension}",
+				"--runInBand",
+				"-no-cache"
+			],
+			"skipFiles": [
+				"<node_internals>/**/*.js"
+			],
+			"protocol": "inspector",
+			"console": "integratedTerminal",
+			"internalConsoleOptions": "neverOpen"
 		}
 	]
 }
