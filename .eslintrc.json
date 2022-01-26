@@ -205,6 +205,7 @@
         "quote-props": ["warn", "as-needed"],
         "quotes": ["warn", "single", "avoid-escape"],
         "radix": ["warn", "as-needed"],
+        "require-await": "error",
         "react-hooks/exhaustive-deps": "off",
         "react-hooks/rules-of-hooks": "warn",
         "react/destructuring-assignment": ["warn", "always"],
