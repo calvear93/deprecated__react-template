@@ -14,24 +14,28 @@
         "module": "commonjs",
         "moduleResolution": "node",
         "jsx": "react-jsx",
-        "allowJs": true,
-        "checkJs": true,
-        "declaration": true,
+        "resolveJsonModule": true,
 
         "lib": ["dom", "dom.iterable", "es2021"],
         "typeRoots": ["node_modules/@types"],
 
-        "resolveJsonModule": true,
+        "allowJs": true,
+        "checkJs": true,
+
+        "experimentalDecorators": false,
+        "emitDecoratorMetadata": false,
 
         "incremental": true,
-        "declarationMap": true,
         "sourceMap": true,
-
+        "declaration": true,
+        "declarationMap": true,
         "removeComments": true,
+
         "isolatedModules": true,
         "esModuleInterop": true,
         "importHelpers": true,
         "skipLibCheck": false,
+        "downlevelIteration": false,
 
         "strict": true,
         "strictBindCallApply": true,
@@ -48,11 +52,8 @@
         "noUnusedLocals": false,
         "noUnusedParameters": false,
         "useUnknownInCatchVariables": true,
-        "exactOptionalPropertyTypes": false,
-
-        "experimentalDecorators": true,
-        "emitDecoratorMetadata": true
+        "exactOptionalPropertyTypes": false
     },
     "include": ["src/**/*", "**/*.spec.ts", "**/*.test.ts"],
-    "exclude": ["node_modules", "build", "dist", "env", "deploy"]
+    "exclude": ["node_modules", "build", "dist", "env"]
 }

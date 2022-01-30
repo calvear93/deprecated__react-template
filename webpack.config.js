@@ -14,6 +14,8 @@ module.exports = {
             "verbose": true,
             "slowTestThreshold": 10,
             "testTimeout": 30000,
+            "resetModules": true,
+            "clearMocks": true,
             "coverageDirectory": "__reports__/coverage",
             "collectCoverageFrom": [
                 "src/**/*.(t|j)s"
