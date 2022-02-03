@@ -1,4 +1,6 @@
+const path = require('path');
 const alias = require('craco-alias');
+const stylelint = require("stylelint-webpack-plugin");
 
 module.exports = {
     devServer: {
@@ -8,6 +10,17 @@ module.exports = {
             'X-Content-Type-Options': 'nosniff',
             'X-XSS-Protection': '1; mode=block'
         }
+    },
+    webpack: {
+        plugins: {
+            add: [
+                new stylelint({
+                    configBasedir: __dirname,
+                    context: path.resolve(__dirname, 'src'),
+                    files: ['**/*.css', '**/*.scss'],
+                }),
+            ],
+        },
     },
     jest: {
         configure: {
