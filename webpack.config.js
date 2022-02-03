@@ -1,6 +1,7 @@
 const path = require('path');
 const alias = require('craco-alias');
 const stylelint = require("stylelint-webpack-plugin");
+const { ESLINT_MODES } = require("@craco/craco");
 
 module.exports = {
     devServer: {
@@ -18,9 +19,9 @@ module.exports = {
                     configBasedir: __dirname,
                     context: path.resolve(__dirname, 'src'),
                     files: ['**/*.css', '**/*.scss'],
-                }),
-            ],
-        },
+                })
+            ]
+        }
     },
     jest: {
         configure: {
@@ -44,6 +45,9 @@ module.exports = {
                 "__mocks__"
             ]
         }
+    },
+    eslint: {
+        mode: ESLINT_MODES.file
     },
     plugins: [
         {
