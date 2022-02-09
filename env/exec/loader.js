@@ -1,6 +1,6 @@
 const fs = require('fs');
 const app = require('../../package.json');
-const settings = require('../appsettings.json');
+const appsettings = require('../appsettings.json');
 const { flatten } = require('./utils/flatten.util');
 
 const debug = process.argv.indexOf('--verbose') > 0;
@@ -16,15 +16,14 @@ const debug = process.argv.indexOf('--verbose') > 0;
  */
 function buildEnv()
 {
-    const envs = process.argv[process.argv.indexOf('-e') + 1].split(',');
-
-    const envName = envs[0];
-    const modeName = envs[1];
+    const [envName, ...modes] = process
+        .argv[process.argv.indexOf('-e') + 1]
+        .split(',');
 
     console.log(
-        '\x1b[32m',
+        '\x1b[36m',
         '\n',
-        `Executing "${modeName}" mode in "${envName}" environment`,
+        `Executing "${envName}" environment in "${modes.join('+')}" mode`,
         '\x1b[0m'
     );
 
@@ -32,19 +31,19 @@ function buildEnv()
         fs.mkdirSync('env/secrets');
 
     const vars = {
-        [modeName]: {
+        [envName]: {
+            REACT_APP_ENV: envName,
+
             REACT_APP_VERSION: app.version,
             REACT_APP_PROJECT: app.project,
             REACT_APP_NAME: app.name,
             REACT_APP_TITLE: app.title,
-            REACT_APP_DESCRIPTION: app.description
-        },
-        [envName]: {
-            REACT_APP_ENV: envName,
-            ...flatten(settings.default),
-            ...flatten(settings.env?.[envName]),
+            REACT_APP_DESCRIPTION: app.description,
+
+            ...flatten(appsettings['[DEFAULT]']),
+            ...flatten(appsettings['[ENV]']?.[envName]),
             ...flatten(readEnvFile(`env/secrets/${envName}.env.json`)),
-            ...flatten(settings.mode?.[modeName]),
+            ...mergeModes(modes),
             ...flatten(readEnvFile(`env/secrets/${envName}.local.env.json`, true))
         }
     };
@@ -95,6 +94,26 @@ function readEnvFile(filePath, isLocal = false)
 
         throw error;
     }
+}
+
+/**
+ * Merges multiple execution modes
+ * a single variables object.
+ *
+ * @param {string[]} modes names of execution modes
+ *
+ * @returns {any} secrets object from modes
+ */
+function mergeModes(modes)
+{
+    return modes.reduce((merge, modeName) => {
+        merge = {
+            ...merge,
+            ...flatten(appsettings['[MODE]']?.[modeName]),
+        };
+
+        return merge;
+    }, {});
 }
 
 // exports variables for environment loading
