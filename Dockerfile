@@ -3,8 +3,8 @@
 ###
 
 # global variables
-ARG NODE=node:16.13.2
-ARG ALPINE=node:16.13.2-alpine
+ARG NODE=node:16.14.0
+ARG ALPINE=node:16.14.0-alpine
 ARG APP_DIR='/app/'
 
 
@@ -66,8 +66,8 @@ WORKDIR ${APP_DIR}
 # alpine security updates
 RUN apk --no-cache -U upgrade
 
-# installs serve
-RUN npm install -g serve
+# installs http-server (https://www.npmjs.com/package/http-server)
+RUN npm install -g http-server@14.1.0
 RUN npm cache clean --force
 
 # non root user mode
@@ -75,6 +75,6 @@ RUN chown -R node:node ${APP_DIR}
 USER node
 
 # execs start command
-CMD ["serve", "-s", "-p", "8080"]
+CMD ["http-server", "--port", "8080", "--cors", "--brotli", "--silent", "-c-1"]
 
 EXPOSE 8080/tcp
