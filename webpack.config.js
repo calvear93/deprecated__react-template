@@ -2,6 +2,7 @@ const path = require('path');
 const alias = require('craco-alias');
 const stylelint = require("stylelint-webpack-plugin");
 const { ESLINT_MODES } = require("@craco/craco");
+const jestConfig = require('./jest.config.json');
 
 module.exports = {
     devServer: {
@@ -24,27 +25,7 @@ module.exports = {
         }
     },
     jest: {
-        configure: {
-            "verbose": true,
-            "slowTestThreshold": 10,
-            "testTimeout": 30000,
-            "clearMocks": true,
-            "coverageDirectory": "__reports__/coverage",
-            "collectCoverageFrom": [
-                "src/**/*.(t|j)s"
-            ],
-            "coveragePathIgnorePatterns": [
-                "index.ts",
-                ".d.ts",
-                "src/app",
-                "src/modules",
-                "service-worker.ts",
-                "tests",
-                "__reports__",
-                "__tests__",
-                "__mocks__"
-            ]
-        }
+        configure: jestConfig
     },
     eslint: {
         mode: ESLINT_MODES.file
