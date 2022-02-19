@@ -54,11 +54,5 @@
         "useUnknownInCatchVariables": true,
         "exactOptionalPropertyTypes": false
     },
-    "include": ["src/**/*"],
-    "exclude": [
-        "**/*.spec.ts",
-        "**/*.test.ts",
-        "**/__tests__",
-        "**/__mocks__"
-    ]
+    "include": ["src/**/*"]
 }
