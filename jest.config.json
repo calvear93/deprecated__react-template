@@ -13,7 +13,8 @@
         "service-worker.ts",
         "tests",
         "__tests__",
-        "__mocks__"
+        "__mocks__",
+        "__fixtures__"
     ],
     "bail": 1,
     "verbose": true,
