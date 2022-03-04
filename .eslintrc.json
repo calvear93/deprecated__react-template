@@ -167,7 +167,7 @@
                 "args": "after-used",
                 "caughtErrors": "all",
                 "vars": "local",
-                "varsIgnorePattern": "^_"
+                "varsIgnorePattern": "^_.*"
             }
         ],
         "no-use-before-define": [
