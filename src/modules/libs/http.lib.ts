@@ -9,13 +9,6 @@ import axios, { AxiosError, AxiosInstance } from 'axios';
 import HttpStatus from 'http-status-codes';
 
 /**
- * Http Status Codes.
- *
- * @type {object}
- */
-export { HttpStatus };
-
-/**
  * Http Methods.
  *
  * @type {object}
@@ -91,3 +84,10 @@ export function createHttpClient(
 
     return client;
 }
+
+/**
+ * Http Status Codes.
+ *
+ * @type {object}
+ */
+export { default as HttpStatus } from 'http-status-codes';

@@ -75,6 +75,17 @@
                 ]
             }
         ],
+        "scss/function-no-unknown": [
+            true,
+            {
+                "ignoreFunctions": [
+                    "map-get",
+                    "box-shadow",
+                    "text-shadow",
+                    "z-index"
+                ]
+            }
+        ],
         "alpha-value-notation": "number",
         "block-no-empty": true,
         "color-function-notation": "legacy",

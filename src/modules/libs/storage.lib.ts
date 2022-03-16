@@ -46,7 +46,7 @@ export function memoizedAsyncCallback<
             store.get(key);
 
         if (cache && cache.expiration > 0 && Date.now() < cache.expiration)
-            return Promise.resolve(cache.data);
+            return cache.data;
 
         const data = await getter(args);
 
@@ -59,4 +59,4 @@ export function memoizedAsyncCallback<
     };
 }
 
-export { storage };
+export { default as storage } from 'store2';

@@ -49,7 +49,7 @@ class RouterService {
             parentPayload
         );
 
-        this._routes = this._routes.concat(routes);
+        this._routes = [...this._routes, ...routes];
 
         return routes;
     }

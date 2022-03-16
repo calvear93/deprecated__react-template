@@ -41,7 +41,8 @@ registerRoute(
 
         // if this looks like a URL for a resource, because it contains
         // a file extension, skip.
-        if (url.pathname.match(fileExtensionRegexp)) return false;
+        // eslint-disable-next-line sonarjs/prefer-single-boolean-return
+        if (fileExtensionRegexp.test(url.pathname)) return false;
 
         // return true to signal that we want to use the handler.
         return true;
