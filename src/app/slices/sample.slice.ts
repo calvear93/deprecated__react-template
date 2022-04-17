@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { AppState } from 'app';
+import { AppState } from 'app/App.store';
 
 export interface SampleState {
     state: number;

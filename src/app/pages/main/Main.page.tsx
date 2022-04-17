@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Link } from '@router';
-import { useAppDispatch } from 'app';
-import { sampleSlice, useSampleSelector } from 'slices';
+import { useAppDispatch } from 'app/App.store';
+import { sampleSlice, useSampleSelector } from 'app/slices';
 import styles from './main.page.module.scss';
 
 const { sample: sampleAction } = sampleSlice.actions;

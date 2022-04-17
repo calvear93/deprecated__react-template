@@ -3,13 +3,13 @@ import { lazy } from 'react';
 
 // layouts container
 const Layouts = {
-    App: lazy(() => import('layouts/app/App.layout'))
+    App: lazy(() => import('app/layouts/app/App.layout'))
 };
 
 // pages container
 const Pages = {
-    Main: lazy(() => import('pages/main/Main.page')),
-    Detail: lazy(() => import('pages/detail/Detail.page'))
+    Main: lazy(() => import('app/pages/main/Main.page')),
+    Detail: lazy(() => import('app/pages/detail/Detail.page'))
 };
 
 /**

@@ -44,37 +44,36 @@ Main feature are:
 ├── README.md
 ├── .vscode/ # vscode debug config
 ├── env/
-│   ├── exec/
-│   │   ├── env.schema.json # env vars schema
-│   │   └── loader.js # environment variables loader for env-cmd
 │   ├── secrets/ # will contains dev.env.json, qa.env.json, etc.
 │   └── appsettings.json # non secret environment variables
 ├── src/
 │   ├── app/ # initialization
 │   │   ├── assets/
 │   │   ├── config/
+│   │   ├── components/ # shared components
+│   │   ├── hooks/ # shared hooks
 │   │   ├── styles/ # global styles
+│   │   ├── providers/ # adapters, api connections
+│   │   ├── slices/ # redux reducers and actions
+│   │   ├── layouts/ # app layouts and containers
+│   │   ├── pages/ # app pages, loaded in app/app.routes.ts
 │   │   ├── assets.d.ts # assets and modules declaration
 │   │   ├── app.routes.ts # application routes
 │   │   ├── App.store.tsx # redux
 │   │   ├── App.router.tsx
 │   │   └── App.tsx
-│   ├── components/ # shared components
-│   ├── hooks/ # shared hooks
-│   ├── layouts/ # app layouts and containers
-│   ├── pages/ # app pages, loaded in app/app.routes.ts
-│   ├── providers/ # adapters, api connections
-│   ├── slices/ # redux reducers and actions
 │   ├── tests/ # e2e tests
 │   ├── modules/ # libraries shared with other apps
 │   │   ├── router/ # routing using react router v6
 │   │   ├── toast/ # react-toastify
 │   │   └── swal/ # sweetalert 2
 │   ├── env.d.ts # .env environment types declaration
+│   ├── assets.d.ts # assets types declaration
+│   ├── vendor.d.ts # providers types overriding
+│   ├── service-worker.ts
 │   └── index.tsx
 ├── Dockerfile
 ├── tsconfig.json
-├── service-worker.ts
 ├── webpack.config.js # webpack config (craco)
 └── package.json
 ```

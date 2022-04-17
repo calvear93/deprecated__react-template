@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { useDispatch } from 'react-redux';
-import { configureMiddleware } from './config/middleware';
-import { sampleSlice } from 'slices/sample.slice';
-import { asyncSlice } from 'pages/detail/slices/async.slice';
+import { configureMiddleware } from 'app/config/middleware';
+import { sampleSlice } from 'app/slices/sample.slice';
+import { asyncSlice } from 'app/pages/detail/slices/async.slice';
 
 const DEBUG = process.env.REACT_APP_DEBUG === 'true';
 const DEV =

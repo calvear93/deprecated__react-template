@@ -1,9 +1,9 @@
 import { Provider } from 'react-redux';
 import { BrowserRouter } from '@router';
-import { AppStore } from './App.store';
-import { AppRouter } from './App.router';
+import { AppStore } from 'app/App.store';
+import { AppRouter } from 'app/App.router';
 import '@web-font';
-import './styles/app.scss';
+import 'app/styles/app.scss';
 
 /**
  * App container.

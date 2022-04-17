@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { AppState } from 'app';
+import { AppState } from 'app/App.store';
 import { fetchSampleAsyncMock } from '../__mocks__/fetchSampleAsync.mock';
 
 export interface FetchSampleAsyncResponse {

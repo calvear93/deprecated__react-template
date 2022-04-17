@@ -6,7 +6,7 @@ import {
     screen,
     waitFor
 } from '@testing-library/react';
-import { AppStore } from 'app';
+import { AppStore } from 'app/App.store';
 import { Provider } from 'react-redux';
 import { DetailPage } from '../Detail.page';
 
