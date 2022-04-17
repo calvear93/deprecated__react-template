@@ -32,7 +32,6 @@ Main feature are:
 -   `typescript` ready
 -   `eslint` with `prettier`
 -   `stylelint` for `css` and `sass`
--   Environment variables handler using `env-cmd`
 -   `react router` 6 with declarative routing handler
 -   `service worker` ready
 -   `redux` ready using `@redux-toolkit`
