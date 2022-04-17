@@ -16,6 +16,6 @@ const Router = createRouter({
  *
  * @returns {JSX.Element} application router
  */
-export const AppRouter: React.VFC = (): JSX.Element => {
+export const AppRouter: React.FC = (): JSX.Element => {
     return <Router />;
 };

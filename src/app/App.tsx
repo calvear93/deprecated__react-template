@@ -13,7 +13,7 @@ import './styles/app.scss';
  *
  * @returns {JSX.Element} app container
  */
-export const App: React.VFC = (): JSX.Element => {
+export const App: React.FC = (): JSX.Element => {
     return (
         <BrowserRouter basename={process.env.REACT_APP_BASE_PATH}>
             <Provider store={AppStore}>

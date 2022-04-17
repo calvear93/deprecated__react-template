@@ -45,7 +45,7 @@ export interface IRouterProps {
  *      fallback: <h1>Not Found</h1>
  *  });
  *
- *  export const AppRouter: React.VFC = (): JSX.Element => {
+ *  export const AppRouter: React.FC = (): JSX.Element => {
  *      // authorization or any other logic
  *
  *      return <Router />;
@@ -59,7 +59,7 @@ export const createRouter = ({
     routes,
     loader = 'Loading',
     fallback
-}: IRouterProps): React.VFC => {
+}: IRouterProps): React.FC => {
     const paths = routerService.createRoutes(routes, '/').map((route) => {
         const { path } = route;
 

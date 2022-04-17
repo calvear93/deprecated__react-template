@@ -11,7 +11,7 @@ const { sample: sampleAction } = sampleSlice.actions;
  *
  * @returns {JSX.Element} main page
  */
-export const MainPage: React.VFC = (): JSX.Element => {
+export const MainPage: React.FC = (): JSX.Element => {
     const dispatch = useAppDispatch();
     const { message } = useSampleSelector();
 

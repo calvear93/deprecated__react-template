@@ -7,7 +7,7 @@ import styles from './detail.page.module.scss';
  *
  * @returns {JSX.Element} detail page
  */
-export const DetailPage: React.VFC = (): JSX.Element => {
+export const DetailPage: React.FC = (): JSX.Element => {
     const { id } = useParams();
 
     return (

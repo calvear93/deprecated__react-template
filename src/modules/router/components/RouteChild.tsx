@@ -12,7 +12,7 @@ export interface IRouteChildProps {
  *
  * @returns {JSX.Element | null} route child
  */
-export const RouteChild: React.VFC<IRouteChildProps> = ({
+export const RouteChild: React.FC<IRouteChildProps> = ({
     route
 }): JSX.Element | null => {
     const { title, render: { layout: Layout, child: Child } = {} } = route;
