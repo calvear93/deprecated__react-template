@@ -39,7 +39,7 @@
         "stylelint:fix": "stylelint src/**/*.{css,scss,sass}"
     },
     "dependencies": {
-        "@calvear/env": "^1.2.0",
+        "@calvear/env": "^1.2.1",
         "@craco/craco": "^7.0.0-alpha.3",
         "@reduxjs/toolkit": "^1.8.1",
         "@testing-library/jest-dom": "^5.16.4",
