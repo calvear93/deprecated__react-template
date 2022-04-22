@@ -26,11 +26,18 @@ declare global {
         }
     }
 
-    // SECTION: custom global types
+    // SECTION: global custom types
 
-    type UUID = `${string}-${string}-${string}-${string}-${string}`;
+    type decimal = number;
 
-    type NumberString = `${number}`;
+    type seconds = number;
+
+    type millis = number;
+
+    // Unix timestamp, number of seconds that have elapsed since January 1, 1970
+    type epoch = seconds;
+
+    type AnyError = unknown;
 }
 
 export {};
