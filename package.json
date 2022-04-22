@@ -24,8 +24,8 @@
         "react-router"
     ],
     "scripts": {
-        "start:dev": "env -e dev -m debug --log debug : craco start --verbose",
-        "start:qa": "env -e qa -m debug : craco start",
+        "start:dev": "env -e dev -m debug --log debug --local : craco start --verbose",
+        "start:qa": "env -e qa -m debug --local : craco start",
         "build:dev": "env -e dev -m build --log debug : craco build -- --profile",
         "build:qa": "env -e qa -m build : craco build",
         "build:prod": "env -e prod -m build :  craco build",
