@@ -7,14 +7,15 @@
     "collectCoverageFrom": ["src/**/*.(t|j)s(x)?"],
     "coveragePathIgnorePatterns": [
         "index.ts",
+        "main.ts",
         ".d.ts",
-        "src/app",
-        "src/modules",
+        ".mock.ts",
+        ".config.ts",
         "service-worker.ts",
-        "tests",
         "__tests__",
         "__mocks__",
-        "__fixtures__"
+        "__fixtures__",
+        "__reports__"
     ],
     "bail": 1,
     "verbose": true,
