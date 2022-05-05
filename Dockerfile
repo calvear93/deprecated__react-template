@@ -3,8 +3,8 @@
 ###
 
 # global variables
-ARG NODE=node:16.14.2
-ARG ALPINE=node:16.14.2-alpine
+ARG NODE=node:16.15.0
+ARG ALPINE=node:16.15.0-alpine
 ARG APP_DIR='/app/'
 
 
@@ -61,6 +61,10 @@ RUN chown -R node:node ${APP_DIR}
 USER node
 
 # execs start command
-CMD ["http-server", "--port", "8080", "--cors", "--brotli", "--silent"]
+CMD ["http-server", "--port", "8080", "--proxy", "http://localhost:8080?", "--cors", "--brotli", "--silent"]
 
 EXPOSE 8080/tcp
+
+## if you want use "serve"
+# RUN npm install -g serve
+# ENTRYPOINT ["serve", "-s", "-p", "8080"]
