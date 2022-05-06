@@ -61,7 +61,7 @@ RUN chown -R node:node ${APP_DIR}
 USER node
 
 # execs start command
-CMD ["http-server", "--port", "8080", "--proxy", "http://localhost:8080?", "--cors", "--brotli", "--silent"]
+CMD ["http-server", "--port", "8080", "--proxy", "http://localhost:8080?", "--brotli", "--silent"]
 
 EXPOSE 8080/tcp
 
