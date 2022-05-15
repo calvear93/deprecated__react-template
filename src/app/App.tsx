@@ -8,8 +8,8 @@ import 'app/styles/app.scss';
 /**
  * App container.
  *
- * Here occur the initialization
- * and localization of some libs.
+ * Here occur the initialization,
+ * for routing, store and main app.
  *
  * @returns {JSX.Element} app container
  */
@@ -25,7 +25,7 @@ export const App: React.FC = (): JSX.Element => {
 
 /**
  * if you want your app to work offline and load faster, you can change
- * unregister() to register() below. Note this comes with some pitfalls.
+ * REACT_APP_SERVICE_WORKER env var to true. Note this comes with some pitfalls.
  * Learn more about service workers: https://cra.link/PWA
  */
 if (process.env.REACT_APP_SERVICE_WORKER === 'true') {

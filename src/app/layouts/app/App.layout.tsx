@@ -4,7 +4,7 @@ import { Header } from './Header';
 import styles from './app.layout.module.scss';
 
 export interface IAppLayoutProps {
-    children?: JSX.Element;
+    children?: React.ReactNode;
 }
 
 /**
