@@ -4,8 +4,6 @@ import thunk from 'redux-thunk';
 /**
  * Creates a redux logger middleware.
  *
- * @param {boolean} [enable] whether logger is enabled
- *
  * @returns {Middleware} redux logger middleware
  */
 export function configureLogger(): Middleware {
