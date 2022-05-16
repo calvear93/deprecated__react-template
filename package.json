@@ -26,9 +26,10 @@
     "scripts": {
         "start:dev": "env -e dev -m debug --log debug : craco start --verbose",
         "start:qa": "env -e qa -m debug : craco start",
-        "build:dev": "env -e dev -m build --log debug : craco build -- --profile",
+        "build:dev": "env -e dev -m build --log debug : craco build",
         "build:qa": "env -e qa -m build : craco build",
-        "build:prod": "env -e prod -m build :  craco build",
+        "build:prod": "env -e prod -m build : craco build",
+        "build:start": "npx serve -s build",
         "test:dev": "env -e dev -m test : craco test --watchAll=false",
         "test:qa": "env -e qa -m test : craco test --watchAll=false",
         "test:prod": "env -e prod -m test : craco test --watchAll=false",
