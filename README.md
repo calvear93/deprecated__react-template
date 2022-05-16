@@ -111,6 +111,7 @@ it environment may be 'dev', 'qa' or 'prod'.
 | npm run build:`<env>` | build the app                 |
 | npm run test:`<env>`  | executes tests                |
 | npm run test:coverage | testing coverage report       |
+| npm run env:schema    | updates env JSON schema       |
 | npm run lint          | code format review            |
 | npm run lint:fix      | code format review/fix        |
 | npm run stylelint     | stylesheets format review     |
