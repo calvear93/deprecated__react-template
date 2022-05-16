@@ -73,8 +73,8 @@
         "typescript": "^4.6.4"
     },
     "devDependencies": {
-        "@typescript-eslint/eslint-plugin": "^5.23.0",
-        "@typescript-eslint/parser": "^5.23.0",
+        "@typescript-eslint/eslint-plugin": "^5.24.0",
+        "@typescript-eslint/parser": "^5.24.0",
         "eslint": "^8.15.0",
         "eslint-config-prettier": "^8.5.0",
         "eslint-plugin-eslint-comments": "^3.2.0",
@@ -113,7 +113,7 @@
         ]
     },
     "engines": {
-        "node": ">=14.0.0 || ^16.13.1",
+        "node": ">=14.0.0 || ^16.15.0",
         "npm": ">=7.5.6"
     }
 }
