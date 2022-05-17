@@ -43,7 +43,6 @@ Main feature are:
 ├── README.md
 ├── .vscode/ # vscode debug config
 ├── env/
-│   ├── secrets/ # will contains dev.env.json, qa.env.json, etc.
 │   └── appsettings.json # non secret environment variables
 ├── src/
 │   ├── app/ # initialization
