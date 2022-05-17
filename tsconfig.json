@@ -3,11 +3,11 @@
         "baseUrl": "src",
         "outDir": "build",
         "paths": {
-            "@router": ["modules/router"],
-            "@router/*": ["modules/router/*"],
-            "@libs/*": ["modules/libs/*"],
-            "@hooks/*": ["modules/hooks/*"],
-            "@web-font": ["modules/web-font/web-font.scss"]
+            "@router": ["libs/router"],
+            "@router/*": ["libs/router/*"],
+            "@libs/*": ["libs/libs/*"],
+            "@hooks/*": ["libs/hooks/*"],
+            "@web-font": ["libs/web-font/web-font.scss"]
         },
 
         "target": "es2018",

@@ -48,6 +48,7 @@ Main feature are:
 ├── src/
 │   ├── app/ # initialization
 │   │   ├── assets/
+│   │   │   └── assets.d.ts # assets and modules declaration
 │   │   ├── config/
 │   │   ├── components/ # shared components
 │   │   ├── hooks/ # shared hooks
@@ -56,16 +57,13 @@ Main feature are:
 │   │   ├── slices/ # redux reducers and actions
 │   │   ├── layouts/ # app layouts and containers
 │   │   ├── pages/ # app pages, loaded in app/app.routes.ts
-│   │   ├── assets.d.ts # assets and modules declaration
-│   │   ├── app.routes.ts # application routes
-│   │   ├── App.store.tsx # redux
-│   │   ├── App.router.tsx
-│   │   └── App.tsx
+│   │   ├── App.tsx
+│   │   ├──  app.routes.ts # application routes
+│   │   ├──  App.store.tsx # redux
+│   │   └──  App.router.tsx
 │   ├── tests/ # e2e tests
-│   ├── modules/ # libraries shared with other apps
-│   │   ├── router/ # routing using react router v6
-│   │   ├── toast/ # react-toastify
-│   │   └── swal/ # sweetalert 2
+│   ├── libs/ # libraries shared with other apps
+│   │   └── router/ # routing using react router v6
 │   ├── env.d.ts # .env environment types declaration
 │   ├── assets.d.ts # assets types declaration
 │   ├── vendor.d.ts # providers types overriding
@@ -81,11 +79,20 @@ Main feature are:
 
 -   Replace globally these terms:
 
-    -   `<base-path>` api base path, i.e. web (for get /web/\*)
+    -   `<base-path>` web base path, i.e. web (for get /web/\*)
     -   `<app-name>` app name, i.e. home-web
     -   `<project-name>` project name, i.e. my-project
     -   `<project-title>` project title, i.e. My Project
     -   `<project-description>` project description, i.e. Web for show account info
+
+-   Set up your `dev.local.env.json` with:
+
+```json
+{
+    "PUBLIC_URL": "",
+    "BASE_PATH": "/"
+}
+```
 
 -   Install [NodeJS](https://nodejs.org/es/) for your machine.
 -   Execute `npm install` command. (`npm i --force` in case of conflicts).
