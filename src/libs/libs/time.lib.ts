@@ -42,7 +42,7 @@ const FORMAT: any = {
  *
  * @returns {string} time format pattern.
  */
-function timeFormatChooser(format24: boolean = true): string {
+function timeFormatChooser(format24 = true): string {
     return format24 ? FORMAT.TIME_24H_FORMAT : FORMAT.TIME_12H_FORMAT;
 }
 
@@ -98,7 +98,7 @@ export function formatDate(
  */
 export function formatDateTime(
     date: Date | string | number,
-    format24: boolean = true,
+    format24 = true,
     formatPattern: string | undefined
 ): string {
     if (typeof date !== 'object') date = new Date(date);
@@ -123,7 +123,7 @@ export function formatDateTime(
  */
 export function formatTime(
     date: Date | string | number,
-    format24: boolean = true,
+    format24 = true,
     formatPattern: string | undefined
 ): string {
     if (typeof date !== 'object') date = new Date(date);
@@ -156,7 +156,7 @@ export function toNaturalDate(date: Date | string | number): string {
  */
 export function toNaturalDateTime(
     date: Date | string | number,
-    format24: boolean = true
+    format24 = true
 ): string {
     if (typeof date !== 'object') date = new Date(date);
 
@@ -177,7 +177,7 @@ export function toNaturalDateTime(
  */
 export function toAgeByBirth(
     date: Date | string | number,
-    showDays: boolean = false
+    showDays = false
 ): string {
     if (typeof date !== 'object') date = new Date(date);
 

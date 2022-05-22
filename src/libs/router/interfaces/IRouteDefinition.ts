@@ -1,4 +1,3 @@
-/* eslint-disable no-use-before-define */
 import { LazyExoticComponent } from 'react';
 
 export type RouteRenderComponent = React.FC | LazyExoticComponent<any>;

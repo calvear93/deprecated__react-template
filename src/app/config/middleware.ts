@@ -1,4 +1,5 @@
 import { Middleware, PayloadAction } from '@reduxjs/toolkit';
+import { createLogger } from 'redux-logger';
 import thunk from 'redux-thunk';
 
 /**
@@ -7,8 +8,6 @@ import thunk from 'redux-thunk';
  * @returns {Middleware} redux logger middleware
  */
 export function configureLogger(): Middleware {
-    const { createLogger } = require('redux-logger');
-
     return createLogger({
         duration: true,
         timestamp: true,
@@ -25,7 +24,7 @@ export function configureLogger(): Middleware {
  *
  * @returns {MiddlewareArray<Middleware>} middleware array
  */
-export function configureMiddleware(debug: boolean = false): Middleware[] {
+export function configureMiddleware(debug = false): Middleware[] {
     const middleware: Middleware[] = [thunk];
 
     if (debug) middleware.push(configureLogger());

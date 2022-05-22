@@ -36,7 +36,7 @@ export function memoizedAsyncCallback<
 >(
     key: string,
     getter: T,
-    expiration: number = 0,
+    expiration = 0,
     storageType: StorageType = 'local'
 ): (...args: Parameters<T>) => Promise<I> {
     const store = storage[storageType];

@@ -3,6 +3,11 @@
     "testEnvironment": "jsdom",
     "moduleDirectories": ["node_modules", "src"],
     "moduleFileExtensions": ["js", "jsx", "ts", "tsx", "json"],
+    "setupFilesAfterEnv": ["@testing-library/jest-dom"],
+    "bail": 1,
+    "verbose": true,
+    "testTimeout": 30000,
+    "slowTestThreshold": 10,
     "coverageDirectory": "__reports__/coverage",
     "collectCoverageFrom": ["src/**/*.(t|j)s(x)?"],
     "coveragePathIgnorePatterns": [
@@ -16,10 +21,5 @@
         "__mocks__",
         "__fixtures__",
         "__reports__"
-    ],
-    "bail": 1,
-    "verbose": true,
-    "testTimeout": 30000,
-    "slowTestThreshold": 10,
-    "clearMocks": true
+    ]
 }
