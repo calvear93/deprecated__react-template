@@ -289,6 +289,7 @@
             "error",
             { "allowTestingFrameworkSetupHook": "beforeAll" }
         ],
+        "testing-library/no-debugging-utils": "warn",
         "semi": ["error", "always"],
         "semi-spacing": "warn",
         "semi-style": ["warn", "last"],
