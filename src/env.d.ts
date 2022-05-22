@@ -10,9 +10,11 @@ declare global {
         interface ProcessEnv {
             NODE_ENV: 'development' | 'production' | 'test';
             REACT_APP_ENV: 'dev' | 'qa' | 'prod';
+            DEBUG?: string;
 
             // SECTION: project info from package.json
             REACT_APP_VERSION: string;
+            REACT_APP_PROJECT: string;
             REACT_APP_NAME: string;
             REACT_APP_TITLE: string;
             REACT_APP_DESCRIPTION: string;
