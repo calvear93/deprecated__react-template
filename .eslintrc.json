@@ -285,6 +285,10 @@
         "react/self-closing-comp": "warn",
         "react/sort-comp": "warn",
         "react/sort-prop-types": "warn",
+        "testing-library/no-render-in-setup": [
+            "error",
+            { "allowTestingFrameworkSetupHook": "beforeAll" }
+        ],
         "semi": ["error", "always"],
         "semi-spacing": "warn",
         "semi-style": ["warn", "last"],

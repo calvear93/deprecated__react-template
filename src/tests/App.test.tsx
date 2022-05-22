@@ -1,24 +1,21 @@
-import { cleanup, render, screen } from '@testing-library/react';
+import {
+    render,
+    screen,
+    waitForElementToBeRemoved
+} from '@testing-library/react';
 import { App } from 'app/App';
 
 describe('App', () => {
-    afterEach(cleanup);
-
-    test('has header', async () => {
+    beforeAll(async () => {
         render(<App />);
 
-        const header = await screen.findByText('HEADER BASE');
-
-        expect(header).toBeInTheDocument();
-        expect(header.tagName).toEqual('HEADER');
+        // waits for lazy loading
+        await waitForElementToBeRemoved(() => screen.queryByText('Loading'));
     });
 
-    test('has footer', async () => {
-        render(<App />);
+    test('has header (banner role) with content "HEADER BASE"', () => {
+        const header = screen.getByRole('banner');
 
-        const footer = await screen.findByText('FOOTER BASE');
-
-        expect(footer).toBeInTheDocument();
-        expect(footer.tagName).toEqual('FOOTER');
+        expect(header).toHaveTextContent('HEADER BASE');
     });
 });
