@@ -1,18 +1,18 @@
 import { useEffect } from 'react';
-import { IRouteDefinition } from '../interfaces/IRouteDefinition';
+import { RouteDefinition } from '../interfaces/IRouteDefinition';
 
-export interface IRouteChildProps {
-    route: IRouteDefinition;
+export interface RouteChildProps {
+    route: RouteDefinition;
 }
 
 /**
  * Renders a route.
  *
- * @param {IRouteChildProps} props
+ * @param {RouteChildProps} props
  *
  * @returns {JSX.Element | null} route child
  */
-export const RouteChild: React.FC<IRouteChildProps> = ({
+export const RouteChild: React.FC<RouteChildProps> = ({
     route
 }): JSX.Element | null => {
     const { title, render: { layout: Layout, child: Child } = {} } = route;

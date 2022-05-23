@@ -1,6 +1,6 @@
 import { useRoutePayload } from '@router';
 
-interface IHeaderPayload {
+interface HeaderPayload {
     header?: { title: string };
 }
 
@@ -10,7 +10,7 @@ interface IHeaderPayload {
  * @returns {JSX.Element} header component
  */
 export const Header: React.FC = (): JSX.Element => {
-    const { header: { title } = {} } = useRoutePayload<IHeaderPayload>();
+    const { header: { title } = {} } = useRoutePayload<HeaderPayload>();
 
     return <header>{title}</header>;
 };

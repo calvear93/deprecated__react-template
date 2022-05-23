@@ -1,5 +1,5 @@
 import {
-    IRouteDefinition,
+    RouteDefinition,
     RouteRenderComponent
 } from './interfaces/IRouteDefinition';
 
@@ -12,9 +12,9 @@ class RouterService {
      * Application routes
      *
      * @private
-     * @type {IRouteDefinition[]}
+     * @type {RouteDefinition[]}
      */
-    private _routes: IRouteDefinition[] = [];
+    private _routes: RouteDefinition[] = [];
 
     /**
      * Return routes.
@@ -29,19 +29,19 @@ class RouterService {
      * Flattens a route definition
      * four router rendering.
      *
-     * @param {IRouteDefinition[]} routesDefinition
+     * @param {RouteDefinition[]} routesDefinition
      * @param {string} basePath
      * @param {RouteRenderComponent} parentLayout
      * @param {RouteRenderComponent} parentPayload
      *
-     * @returns {IRouteDefinition[]} flattened routes
+     * @returns {RouteDefinition[]} flattened routes
      */
     createRoutes(
-        routesDefinition: IRouteDefinition[],
+        routesDefinition: RouteDefinition[],
         basePath: string,
         parentLayout?: RouteRenderComponent,
         parentPayload?: RouteRenderComponent
-    ): IRouteDefinition[] {
+    ): RouteDefinition[] {
         const routes = this._createRoutes(
             routesDefinition,
             basePath,
@@ -58,21 +58,21 @@ class RouterService {
      * Flattens a route definition
      * four router rendering.
      *
-     * @param {IRouteDefinition[]} routesDefinition
+     * @param {RouteDefinition[]} routesDefinition
      * @param {string} basePath
      * @param {RouteRenderComponent} parentLayout
      * @param {RouteRenderComponent} parentPayload
-     * @param {IRouteDefinition[]} [routes]
+     * @param {RouteDefinition[]} [routes]
      *
-     * @returns {IRouteDefinition[]} flattened routes
+     * @returns {RouteDefinition[]} flattened routes
      */
     private _createRoutes(
-        routesDefinition: IRouteDefinition[],
+        routesDefinition: RouteDefinition[],
         basePath: string,
         parentLayout?: RouteRenderComponent,
         parentPayload?: RouteRenderComponent,
-        routes: IRouteDefinition[] = []
-    ): IRouteDefinition[] {
+        routes: RouteDefinition[] = []
+    ): RouteDefinition[] {
         for (const route of routesDefinition) {
             const {
                 title,

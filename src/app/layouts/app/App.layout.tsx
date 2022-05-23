@@ -3,7 +3,7 @@ import { Footer } from './Footer';
 import { Header } from './Header';
 import styles from './app.layout.module.scss';
 
-export interface IAppLayoutProps {
+export interface AppLayoutProps {
     children?: React.ReactNode;
 }
 
@@ -12,7 +12,7 @@ export interface IAppLayoutProps {
  *
  * @returns {JSX.Element} app layout
  */
-export const AppLayout: React.FC<IAppLayoutProps> = ({
+export const AppLayout: React.FC<AppLayoutProps> = ({
     children
 }): JSX.Element => (
     <main className={styles.layout}>

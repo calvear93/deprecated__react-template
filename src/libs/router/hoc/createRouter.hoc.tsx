@@ -1,11 +1,11 @@
 import { Suspense, SuspenseProps } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { RouteChild } from '../components/RouteChild';
-import { IRouteDefinition } from '../interfaces/IRouteDefinition';
+import { RouteDefinition } from '../interfaces/IRouteDefinition';
 import { routerService } from '../router.service';
 
-export interface IRouterProps {
-    routes: IRouteDefinition[];
+export interface RouterProps {
+    routes: RouteDefinition[];
 
     loader?: SuspenseProps['fallback'];
 
@@ -51,7 +51,7 @@ export interface IRouterProps {
  *      return <Router />;
  *  };
  *
- * @param {IRouterProps} props
+ * @param {RouterProps} props
  *
  * @returns {JSX.Element} routes render
  */
@@ -59,7 +59,7 @@ export const createRouter = ({
     routes,
     loader = 'Loading',
     fallback
-}: IRouterProps): React.FC => {
+}: RouterProps): React.FC => {
     const paths = routerService.createRoutes(routes, '/').map((route) => {
         const { path } = route;
 

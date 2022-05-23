@@ -1,4 +1,4 @@
-import { IRouteDefinition } from '@router';
+import { RouteDefinition } from '@router';
 import { lazy } from 'react';
 
 // layouts container
@@ -24,7 +24,7 @@ const Pages = {
  * This routes should be used in createRouter
  * function from @router module.
  */
-export const routes: Record<string, IRouteDefinition[]> = {
+export const routes: Record<string, RouteDefinition[]> = {
     app: [
         {
             path: '/',
