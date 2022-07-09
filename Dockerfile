@@ -44,7 +44,7 @@ FROM ${ALPINE}
 ARG APP_DIR
 
 # retrieves build app
-COPY --from=builder ${APP_DIR}'build' ${APP_DIR}
+COPY --from=builder ${APP_DIR}'dist' ${APP_DIR}
 
 # working directory setup
 WORKDIR ${APP_DIR}

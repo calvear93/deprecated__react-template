@@ -123,10 +123,10 @@ Default nesting delimiter is `__`:
 So, in your application you can use the variables as shown below:
 
 ```javascript
-const myVar1 = process.env.GROUP1__VAR;
-const myVar2 = process.env.GROUP2__VAR;
-const myVar2 = process.env.GROUP2__SUBGROUP1_VAR;
-const myVar3 = process.env.VAR3;
+const myVar1 = import.meta.env.GROUP1__VAR;
+const myVar2 = import.meta.env.GROUP2__VAR;
+const myVar2 = import.meta.env.GROUP2__SUBGROUP1_VAR;
+const myVar3 = import.meta.env.VAR3;
 ```
 
 ## 6. Priority

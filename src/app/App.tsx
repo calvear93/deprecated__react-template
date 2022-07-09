@@ -15,21 +15,10 @@ import 'app/styles/app.scss';
  */
 export const App: React.FC = (): JSX.Element => {
     return (
-        <BrowserRouter basename={process.env.REACT_APP_BASE_PATH}>
+        <BrowserRouter basename={import.meta.env.VITE_APP_BASE_PATH}>
             <Provider store={AppStore}>
                 <AppRouter />
             </Provider>
         </BrowserRouter>
     );
 };
-
-/**
- * if you want your app to work offline and load faster, you can change
- * REACT_APP_SERVICE_WORKER env var to true. Note this comes with some pitfalls.
- * Learn more about service workers: https://cra.link/PWA
- */
-if (process.env.REACT_APP_SERVICE_WORKER === 'true') {
-    import('./config/service-worker.register').then((worker) =>
-        worker.register()
-    );
-}

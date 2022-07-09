@@ -14,7 +14,7 @@ export const DetailPage: React.FC = (): JSX.Element => {
         <section className={styles.page}>
             <Link to='/'>Go To Main</Link>
 
-            <h2>{process.env.REACT_APP_ENV}</h2>
+            <h2>{import.meta.env.VITE_APP_ENV}</h2>
             <h3>ID: {id}</h3>
 
             <FetchBox />

@@ -24,25 +24,26 @@
         "react-router"
     ],
     "scripts": {
-        "start:dev": "env -e dev -m debug --log debug : craco start --verbose",
-        "start:qa": "env -e qa -m debug : craco start",
-        "build:dev": "env -e dev -m build --log debug : craco build",
-        "build:qa": "env -e qa -m build : craco build",
-        "build:prod": "env -e prod -m build : craco build",
-        "build:start": "npx serve -s build",
-        "test:dev": "env -e dev -m test : craco test --watchAll=false",
-        "test:qa": "env -e qa -m test : craco test --watchAll=false",
-        "test:prod": "env -e prod -m test : craco test --watchAll=false",
-        "test:coverage": "env -e dev -m debug : craco test --watchAll=false --collectCoverage",
+        "preview": "env -e dev -m debug --log debug : vite preview",
+        "start:dev": "env -e dev -m debug --log debug : vite",
+        "start:qa": "env -e qa -m debug : vite",
+        "build:dev": "env -e dev -m build --log debug : npm run _build",
+        "build:qa": "env -e qa -m build : npm run _build",
+        "build:prod": "env -e prod -m build : npm run _build",
+        "build:start": "npx serve -s dist",
+        "test:dev": "env -e dev -m test : jest",
+        "test:qa": "env -e qa -m test : jest",
+        "test:prod": "env -e prod -m test : jest",
+        "test:coverage": "env -e dev -m debug : jest --coverage",
         "env:schema": "env schema -e dev -m build --ci",
         "lint": "eslint src/**/*.{ts,tsx}",
         "lint:fix": "eslint --fix src/**/*.{ts,tsx}",
         "stylelint": "stylelint src/**/*.{css,scss,sass}",
-        "stylelint:fix": "stylelint src/**/*.{css,scss,sass}"
+        "stylelint:fix": "stylelint src/**/*.{css,scss,sass}",
+        "_build": "tsc --project tsconfig.build.json & vite build"
     },
     "dependencies": {
         "@calvear/env": "^2.1.0",
-        "@craco/craco": "^7.0.0-alpha.7",
         "@reduxjs/toolkit": "^1.8.3",
         "@testing-library/jest-dom": "^5.16.4",
         "@testing-library/react": "^13.3.0",
@@ -54,6 +55,7 @@
         "@types/react-redux": "^7.1.24",
         "@types/redux-logger": "^3.0.9",
         "@types/testing-library__jest-dom": "^5.14.5",
+        "@vitejs/plugin-react": "^1.3.2",
         "axios": "^0.27.2",
         "clsx": "^1.2.1",
         "date-fns": "^2.28.0",
@@ -64,13 +66,17 @@
         "react-dom": "^18.2.0",
         "react-redux": "^8.0.2",
         "react-router-dom": "^6.3.0",
-        "react-scripts": "^5.0.1",
         "redux": "^4.2.0",
         "redux-logger": "^3.0.6",
         "sass": "^1.53.0",
         "store2": "^2.13.2",
-        "stylelint-webpack-plugin": "^3.3.0",
-        "typescript": "^4.7.4"
+        "ts-node": "^10.8.2",
+        "typescript": "^4.7.4",
+        "vite": "^2.9.14",
+        "vite-plugin-checker": "^0.4.8",
+        "vite-plugin-html": "^3.2.0",
+        "vite-plugin-svgr": "^2.2.0",
+        "vite-tsconfig-paths": "^3.5.0"
     },
     "devDependencies": {
         "@typescript-eslint/eslint-plugin": "^5.30.5",
@@ -89,6 +95,7 @@
         "eslint-plugin-sonarjs": "^0.13.0",
         "eslint-plugin-testing-library": "^5.5.1",
         "eslint-plugin-unicorn": "^43.0.1",
+        "jest-environment-jsdom": "^28.1.2",
         "prettier": "^2.7.1",
         "stylelint": "^14.9.1",
         "stylelint-config-css-modules": "^4.1.0",
@@ -97,9 +104,9 @@
         "stylelint-config-standard": "^26.0.0",
         "stylelint-config-standard-scss": "^4.0.0",
         "stylelint-order": "^5.0.0",
-        "stylelint-scss": "^4.3.0"
+        "stylelint-scss": "^4.3.0",
+        "ts-jest": "^28.0.5"
     },
-    "cracoConfig": "webpack.config.js",
     "browserslist": {
         "development": [
             "last 1 chrome version",
@@ -114,7 +121,7 @@
         ]
     },
     "engines": {
-        "node": ">=14.0.0 || ^16.15.0",
+        "node": ">=14.0.0 || ^16.16.0",
         "npm": ">=7.5.6"
     }
 }

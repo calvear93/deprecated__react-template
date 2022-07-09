@@ -23,7 +23,7 @@ export const MainPage: React.FC = (): JSX.Element => {
         <section className={styles.page}>
             <Link to='/detail'>Go To Detail</Link>
             <Link to='/detail/123'>Go To Detail 123</Link>
-            <h2>{process.env.REACT_APP_ENV}</h2>
+            <h2>{import.meta.env.VITE_APP_ENV}</h2>
             <h3>{message}</h3>
         </section>
     );

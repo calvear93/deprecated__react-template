@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "baseUrl": "src",
-        "outDir": "build",
+        "outDir": "dist",
         "paths": {
             "@router": ["libs/router"],
             "@router/*": ["libs/router/*"],
@@ -10,21 +10,22 @@
             "@web-font": ["libs/web-font/web-font.scss"]
         },
 
-        "target": "es2018",
-        "module": "commonjs",
+        "target": "es2022",
+        "module": "es2022",
         "moduleResolution": "node",
         "resolveJsonModule": true,
 
         "jsx": "react-jsx",
-        "lib": ["dom", "dom.iterable", "es2018"],
+        "lib": ["dom", "dom.iterable", "es2022"],
         "typeRoots": ["node_modules/@types"],
 
         "allowJs": true,
-        "checkJs": false,
+        "checkJs": true,
 
         "experimentalDecorators": false,
         "emitDecoratorMetadata": false,
 
+        "composite": false,
         "incremental": true,
         "sourceMap": true,
         "declaration": true,
@@ -42,5 +43,5 @@
         "noUnusedParameters": false,
         "strictPropertyInitialization": false
     },
-    "include": ["src/**/*"]
+    "include": ["src/**/*", "vite.config.ts", "jest.config.ts"]
 }

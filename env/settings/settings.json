@@ -2,5 +2,5 @@
     "expand": false,
     "nullable": false,
     "nestingDelimiter": "_",
-    "varPrefix": "REACT_APP_"
+    "varPrefix": "VITE_APP_"
 }

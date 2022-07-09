@@ -4,9 +4,10 @@ import { configureMiddleware } from 'app/config/middleware';
 import { sampleSlice } from 'app/slices/sample.slice';
 import { asyncSlice } from 'app/pages/detail/slices/async.slice';
 
-const DEBUG = process.env.REACT_APP_DEBUG === 'true';
+const DEBUG = import.meta.env.VITE_APP_DEBUG === 'true';
 const DEV =
-    process.env.NODE_ENV !== 'test' && process.env.REACT_APP_ENV !== 'prod';
+    import.meta.env.NODE_ENV !== 'test' &&
+    import.meta.env.VITE_APP_ENV !== 'prod';
 
 /**
  * Creates a redux store.
