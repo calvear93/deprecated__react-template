@@ -10,7 +10,7 @@
             "@web-font": ["libs/web-font/web-font.scss"]
         },
 
-        "target": "es2022",
+        "target": "es2018",
         "module": "es2022",
         "moduleResolution": "node",
         "resolveJsonModule": true,
