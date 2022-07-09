@@ -41,7 +41,7 @@
         "editor.defaultFormatter": "svipas.prettier-plus"
     },
     "[javascript]": {
-        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+        "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "[javascriptreact]": {
         "editor.defaultFormatter": "dbaeumer.vscode-eslint"

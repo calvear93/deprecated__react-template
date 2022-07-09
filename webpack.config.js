@@ -1,8 +1,12 @@
 const path = require('path');
-const alias = require('craco-alias');
+const { CracoAliasPlugin, aliasWebpack } = require('react-app-alias')
 const stylelint = require("stylelint-webpack-plugin");
-const { ESLINT_MODES } = require("@craco/craco");
 const jestConfig = require('./jest.config.json');
+
+(async () => {
+    const a = await aliasWebpack(require('./tsconfig.json').compilerOptions.paths);
+    console.log(a)
+})();
 
 module.exports = {
     devServer: {
@@ -14,6 +18,7 @@ module.exports = {
         }
     },
     webpack: {
+        alias: aliasWebpack(require('./tsconfig.json').compilerOptions.paths),
         plugins: {
             add: [
                 new stylelint({
@@ -28,16 +33,6 @@ module.exports = {
         configure: jestConfig
     },
     eslint: {
-        mode: ESLINT_MODES.file
-    },
-    plugins: [
-        {
-            plugin: alias,
-            options: {
-                source: 'tsconfig',
-                baseUrl: 'src',
-                tsConfigPath: 'tsconfig.json'
-            }
-        }
-    ]
+        mode: 'file'
+    }
 };

@@ -20,7 +20,7 @@
         "typeRoots": ["node_modules/@types"],
 
         "allowJs": true,
-        "checkJs": true,
+        "checkJs": false,
 
         "experimentalDecorators": false,
         "emitDecoratorMetadata": false,
