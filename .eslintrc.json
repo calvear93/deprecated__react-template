@@ -4,10 +4,8 @@
         "es6": true,
         "browser": true,
         "commonjs": true,
-        "jest": true,
         "serviceworker": true,
-        "es2022": true,
-        "jest/globals": true
+        "es2022": true
     },
     "globals": {
         "React": true,
@@ -41,8 +39,6 @@
         "import",
         "promise",
         "jsx-a11y",
-        "jest",
-        "jest-formatting",
         "testing-library"
     ],
     "extends": [
@@ -136,11 +132,6 @@
                 "allowImplicit": true
             }
         ],
-        "jest/no-disabled-tests": "warn",
-        "jest/no-focused-tests": "error",
-        "jest/no-identical-title": "error",
-        "jest/prefer-to-have-length": "warn",
-        "jest/valid-expect": "error",
         "jsx-quotes": ["warn", "prefer-single"],
         "key-spacing": [
             "warn",
