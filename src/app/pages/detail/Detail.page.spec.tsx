@@ -26,6 +26,6 @@ describe('Detail Page', () => {
             }
         );
 
-        expect(asyncMessage).not.toBeUndefined();
+        expect(asyncMessage).toBeInTheDocument();
     });
 });
