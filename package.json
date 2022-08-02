@@ -1,7 +1,7 @@
 {
     "version": "0.0.1",
     "project": "<project-name>",
-    "name": "2",
+    "name": "<app-name>",
     "title": "<app-title>",
     "description": "<project-description>",
     "license": "MIT",
@@ -42,7 +42,7 @@
     },
     "dependencies": {
         "@calvear/env": "^2.0.1",
-        "@craco/craco": "^7.0.0-alpha.3",
+        "@craco/craco": "^7.0.0-alpha.7",
         "@reduxjs/toolkit": "^1.8.2",
         "@testing-library/jest-dom": "^5.16.4",
         "@testing-library/react": "^13.3.0",

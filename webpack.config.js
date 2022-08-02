@@ -1,7 +1,6 @@
 const path = require('path');
 const alias = require('craco-alias');
 const stylelint = require("stylelint-webpack-plugin");
-const { ESLINT_MODES } = require("@craco/craco");
 const jestConfig = require('./jest.config.json');
 
 module.exports = {
@@ -28,7 +27,7 @@ module.exports = {
         configure: jestConfig
     },
     eslint: {
-        mode: ESLINT_MODES.file
+        mode: 'file'
     },
     plugins: [
         {
